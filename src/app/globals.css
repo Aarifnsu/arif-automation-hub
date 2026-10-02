@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ===== THEME VARIABLES ===== */
+:root[data-theme="dark"] {
+  --bg-primary: #0c1929;
+  --bg-secondary: #0f2035;
+  --bg-card: #132742;
+  --bg-card-hover: #183050;
+  --card-border: #1e3a5f;
+  --text-primary: #ffffff;
+  --text-secondary: #b0c4de;
+  --text-muted: #7a9cc6;
+  --nav-bg: rgba(12, 25, 41, 0.9);
+  --electric-blue: #2563eb;
+  --neon-cyan: #06b6d4;
+  --cyan-glow: #22d3ee;
+  --gradient-blue: linear-gradient(135deg, #2563eb, #06b6d4);
+  --gradient-glow: linear-gradient(135deg, #06b6d4, #22d3ee);
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-glow: rgba(37, 99, 235, 0.15);
+  --toggle-bg: #1e3a5f;
+  --hero-glow1: rgba(37, 99, 235, 0.12);
+  --hero-glow2: rgba(6, 182, 212, 0.08);
+  --grid-line: rgba(37, 99, 235, 0.04);
+  --trust-bg: #0a1525;
+  --bar-btn-bg: rgba(255, 255, 255, 0.15);
+  --bar-btn-border: rgba(255, 255, 255, 0.3);
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #f0f7ff;
+  --bg-secondary: #e8f2ff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5faff;
+  --card-border: #c8ddf5;
+  --text-primary: #0c1929;
+  --text-secondary: #3d5a80;
+  --text-muted: #6b8ab5;
+  --nav-bg: rgba(240, 247, 255, 0.92);
+  --electric-blue: #2563eb;
+  --neon-cyan: #0891b2;
+  --cyan-glow: #0e7490;
+  --gradient-blue: linear-gradient(135deg, #2563eb, #0891b2);
+  --gradient-glow: linear-gradient(135deg, #0891b2, #0e7490);
+  --shadow-color: rgba(37, 99, 235, 0.08);
+  --shadow-glow: rgba(37, 99, 235, 0.12);
+  --toggle-bg: #c8ddf5;
+  --hero-glow1: rgba(37, 99, 235, 0.07);
+  --hero-glow2: rgba(6, 182, 212, 0.05);
+  --grid-line: rgba(37, 99, 235, 0.04);
+  --trust-bg: #e0edff;
+  --bar-btn-bg: rgba(255, 255, 255, 0.25);
+  --bar-btn-border: rgba(255, 255, 255, 0.5);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-card-hover: var(--bg-card-hover);
+  --color-card-border: var(--card-border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-electric-blue: var(--electric-blue);
+  --color-neon-cyan: var(--neon-cyan);
+  --color-cyan-glow: var(--cyan-glow);
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--electric-blue);
+  border-radius: 3px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.gradient-text {
+  background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
