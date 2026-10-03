@@ -23,7 +23,7 @@ export default function BlogPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-20 md:py-28 px-4"
+        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -54,8 +54,8 @@ export default function BlogPage() {
       </section>
 
       {/* Coming Soon */}
-      <section className="py-20 px-4" style={{ background: "var(--bg-secondary)" }}>
-        <div className="max-w-[640px] mx-auto text-center">
+      <section className="py-24 px-4" style={{ background: "var(--bg-secondary)" }}>
+        <div className="max-w-[800px] mx-auto text-center">
           <div
             className="rounded-2xl p-10 md:p-14"
             style={{

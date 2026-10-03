@@ -10,7 +10,7 @@ export default function FinalCTA() {
         transition: "background 0.4s",
       }}
     >
-      <div className="max-w-[700px] mx-auto">
+      <div className="max-w-[800px] mx-auto">
         <h2
           className="font-display text-[clamp(28px,4vw,44px)] font-extrabold mb-4"
           style={{ color: "var(--text-primary)" }}

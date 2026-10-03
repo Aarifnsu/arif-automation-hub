@@ -38,7 +38,7 @@ export default function PortfolioSection() {
       }}
     >
       {/* Section header */}
-      <div className="text-center max-w-[640px] mx-auto mb-14">
+      <div className="text-center max-w-[800px] mx-auto mb-16">
         <span
           className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
           style={{ color: "var(--neon-cyan)" }}
@@ -74,7 +74,7 @@ export default function PortfolioSection() {
           >
             {/* Thumbnail */}
             <div
-              className="relative w-full h-[200px] overflow-hidden"
+              className="relative w-full h-[260px] overflow-hidden"
               style={{ background: p.gradient }}
             >
               <Image src={p.image} alt={p.title} fill className="object-cover" />

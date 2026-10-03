@@ -31,7 +31,7 @@ export default function ProcessSection() {
       }}
     >
       {/* Section header */}
-      <div className="text-center max-w-[640px] mx-auto mb-14">
+      <div className="text-center max-w-[800px] mx-auto mb-16">
         <span
           className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
           style={{ color: "var(--neon-cyan)" }}
@@ -54,7 +54,7 @@ export default function ProcessSection() {
       </div>
 
       {/* Steps */}
-      <div className="relative max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="relative max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Connecting line (desktop only) */}
         <div
           className="hidden lg:block absolute h-[2px] opacity-30"

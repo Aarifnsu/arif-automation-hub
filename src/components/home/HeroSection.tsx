@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden py-20 md:py-28 px-4"
+      className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[520px] md:min-h-[600px] flex items-center"
       style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
     >
       {/* Background effects */}
@@ -28,7 +28,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="max-w-[1280px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
         {/* Text */}
         <div>
           <div

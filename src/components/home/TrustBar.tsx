@@ -8,7 +8,7 @@ export default function TrustBar() {
 
   return (
     <section
-      className="py-14 px-4"
+      className="py-20 px-4"
       style={{
         background: "var(--trust-bg)",
         borderTop: "1px solid var(--card-border)",

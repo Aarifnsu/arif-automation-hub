@@ -57,7 +57,7 @@ export default function CareersPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-20 md:py-28 px-4"
+        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -100,7 +100,7 @@ export default function CareersPage() {
 
       {/* Why Work With Us */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{ background: "var(--bg-secondary)" }}
       >
         <div className="max-w-[1280px] mx-auto">
@@ -111,7 +111,7 @@ export default function CareersPage() {
             Why Work <span className="gradient-text">With Us</span>
           </h2>
           <p
-            className="text-center text-lg mb-14 max-w-2xl mx-auto"
+            className="text-center text-lg mb-16 max-w-2xl mx-auto"
             style={{ color: "var(--text-secondary)" }}
           >
             We offer more than just a job. Join a team where your work matters
@@ -146,7 +146,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 px-4" style={{ background: "var(--bg-primary)" }}>
+      <section className="py-24 px-4" style={{ background: "var(--bg-primary)" }}>
         <div className="max-w-[1280px] mx-auto">
           <h2
             className="font-display text-3xl md:text-4xl font-bold text-center mb-4"
@@ -167,7 +167,7 @@ export default function CareersPage() {
 
       {/* CTA */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{ background: "var(--bg-secondary)" }}
       >
         <div

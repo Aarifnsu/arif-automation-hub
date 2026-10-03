@@ -51,7 +51,7 @@ export default function FreeAuditPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-20 md:py-28 px-4"
+        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -95,7 +95,7 @@ export default function FreeAuditPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-20 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="py-24 px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[1280px] mx-auto">
           <h2
             className="font-display text-3xl md:text-4xl font-bold text-center mb-4"
@@ -104,7 +104,7 @@ export default function FreeAuditPage() {
             What&apos;s <span className="gradient-text">Included</span>
           </h2>
           <p
-            className="text-center text-lg mb-14 max-w-2xl mx-auto"
+            className="text-center text-lg mb-16 max-w-2xl mx-auto"
             style={{ color: "var(--text-secondary)" }}
           >
             Our comprehensive audit covers three critical areas of your online
@@ -153,8 +153,8 @@ export default function FreeAuditPage() {
       </section>
 
       {/* Audit Form */}
-      <section className="py-20 px-4" style={{ background: "var(--bg-primary)" }}>
-        <div className="max-w-[640px] mx-auto">
+      <section className="py-24 px-4" style={{ background: "var(--bg-primary)" }}>
+        <div className="max-w-[800px] mx-auto">
           <h2
             className="font-display text-3xl md:text-4xl font-bold text-center mb-4"
             style={{ color: "var(--text-primary)" }}

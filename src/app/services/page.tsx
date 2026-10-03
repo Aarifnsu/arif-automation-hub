@@ -64,7 +64,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{ background: "var(--bg-secondary)", transition: "background 0.4s" }}
       >
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

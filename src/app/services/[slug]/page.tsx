@@ -116,14 +116,14 @@ export default async function ServiceDetailPage({
 
       {/* Features Grid */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -179,7 +179,7 @@ export default async function ServiceDetailPage({
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center max-w-[640px] mx-auto mb-14">
+          <div className="text-center max-w-[800px] mx-auto mb-16">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -201,7 +201,7 @@ export default async function ServiceDetailPage({
             </p>
           </div>
 
-          <div className="relative max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="relative max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Connecting line */}
             <div
               className="hidden lg:block absolute h-[2px] opacity-30"
@@ -247,14 +247,14 @@ export default async function ServiceDetailPage({
 
       {/* Pricing */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -381,7 +381,7 @@ export default async function ServiceDetailPage({
         }}
       >
         <div className="max-w-[720px] mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -403,7 +403,7 @@ export default async function ServiceDetailPage({
 
       {/* Bottom CTA */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",

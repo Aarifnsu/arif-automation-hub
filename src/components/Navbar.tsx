@@ -106,7 +106,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <ul className="flex items-center gap-0.5 lg:gap-1.5 list-none max-md:hidden">
+          <ul className="flex items-center gap-0.5 lg:gap-1 list-none max-md:hidden shrink min-w-0">
             {navLinks.map((link) =>
               link.hasMega ? (
                 <li
@@ -247,11 +247,11 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop right side */}
-          <div className="flex items-center gap-3 max-md:hidden">
+          <div className="flex items-center gap-3 max-md:hidden shrink-0">
             <ThemeToggle />
             <Link
               href="/free-audit"
-              className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5"
+              className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               style={{
                 background: "var(--gradient-blue)",
                 boxShadow: "0 4px 15px var(--shadow-glow)",

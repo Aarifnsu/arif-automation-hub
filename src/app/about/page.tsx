@@ -60,7 +60,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-20 md:py-28 px-4"
+        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
@@ -179,7 +179,7 @@ export default function AboutPage() {
 
       {/* Stats Bar */}
       <section
-        className="py-16 px-4"
+        className="py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -212,14 +212,14 @@ export default function AboutPage() {
 
       {/* Team */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -317,14 +317,14 @@ export default function AboutPage() {
 
       {/* Values */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -372,7 +372,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section
-        className="py-20 px-4"
+        className="py-24 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
