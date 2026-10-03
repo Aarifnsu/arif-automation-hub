@@ -104,7 +104,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <ul className="flex items-center gap-2 lg:gap-3 list-none max-md:hidden shrink min-w-0 absolute left-1/2 -translate-x-1/2">
+          <ul className="flex items-center gap-3 lg:gap-4 list-none max-md:hidden shrink min-w-0 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) =>
               link.hasMega ? (
                 <li
@@ -115,12 +115,22 @@ export default function Navbar() {
                   onMouseLeave={handleMegaLeave}
                 >
                   <button
-                    className="flex items-center gap-1 border-none cursor-pointer transition-all duration-300 text-sm font-medium px-4 py-2 rounded-xl"
+                    className="flex items-center gap-1.5 border-none cursor-pointer transition-all duration-300 text-[13px] font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5"
                     style={{
                       color: "var(--text-secondary)",
                       background: "var(--bg-card)",
                       border: "1px solid var(--card-border)",
-                      boxShadow: "0 2px 8px var(--shadow-color)",
+                      boxShadow: "0 2px 10px var(--shadow-color)",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = "0 4px 16px var(--shadow-glow)";
+                      e.currentTarget.style.borderColor = "var(--electric-blue)";
+                      e.currentTarget.style.color = "var(--electric-blue)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = "0 2px 10px var(--shadow-color)";
+                      e.currentTarget.style.borderColor = "var(--card-border)";
+                      e.currentTarget.style.color = "var(--text-secondary)";
                     }}
                     onClick={() => setMegaOpen(!megaOpen)}
                   >
@@ -234,15 +244,29 @@ export default function Navbar() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="no-underline text-sm font-medium px-4 py-2 rounded-xl transition-all duration-300"
+                    className="no-underline text-[13px] font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"
                     style={{
                       color:
                         pathname === link.href
                           ? "var(--electric-blue)"
                           : "var(--text-secondary)",
-                      background: "var(--bg-card)",
-                      border: "1px solid var(--card-border)",
-                      boxShadow: "0 2px 8px var(--shadow-color)",
+                      background: pathname === link.href ? "rgba(37, 99, 235, 0.08)" : "var(--bg-card)",
+                      border: pathname === link.href ? "1px solid var(--electric-blue)" : "1px solid var(--card-border)",
+                      boxShadow: pathname === link.href ? "0 2px 12px var(--shadow-glow)" : "0 2px 10px var(--shadow-color)",
+                    }}
+                    onMouseEnter={(e) => {
+                      if (pathname !== link.href) {
+                        e.currentTarget.style.boxShadow = "0 4px 16px var(--shadow-glow)";
+                        e.currentTarget.style.borderColor = "var(--electric-blue)";
+                        e.currentTarget.style.color = "var(--electric-blue)";
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (pathname !== link.href) {
+                        e.currentTarget.style.boxShadow = "0 2px 10px var(--shadow-color)";
+                        e.currentTarget.style.borderColor = "var(--card-border)";
+                        e.currentTarget.style.color = "var(--text-secondary)";
+                      }
                     }}
                   >
                     {link.label}
