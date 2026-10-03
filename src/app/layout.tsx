@@ -37,6 +37,13 @@ export const metadata: Metadata = {
     "GoHighLevel",
     "CRM",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

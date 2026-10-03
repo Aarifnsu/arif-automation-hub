@@ -51,7 +51,7 @@ export default function Navbar() {
           borderBottom: "1px solid var(--card-border)",
         }}
       >
-        <div className="max-w-[1280px] mx-auto flex items-center justify-between h-[96px] px-4 relative">
+        <div className="max-w-[1280px] mx-auto flex items-center justify-between h-[80px] px-4 relative">
           {/* Mobile burger */}
           <button
             className="hidden max-md:flex flex-col gap-[5px] bg-transparent border-none cursor-pointer absolute left-4 z-10"
@@ -93,9 +93,9 @@ export default function Navbar() {
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
               alt="Arif Automation Hub"
-              width={80}
-              height={80}
-              className="rounded-[12px]"
+              width={56}
+              height={56}
+              className="rounded-[10px] max-md:w-12 max-md:h-12"
             />
             <span
               className="font-display font-bold text-xl max-md:hidden"
@@ -296,9 +296,9 @@ export default function Navbar() {
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
               alt="Arif Automation Hub"
-              width={72}
-              height={72}
-              className="rounded-[12px]"
+              width={48}
+              height={48}
+              className="rounded-[10px]"
             />
             <span
               className="font-display font-bold text-base"
