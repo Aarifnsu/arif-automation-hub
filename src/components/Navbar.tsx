@@ -51,7 +51,7 @@ export default function Navbar() {
           borderBottom: "1px solid var(--card-border)",
         }}
       >
-        <div className="max-w-[1280px] mx-auto flex items-center justify-between h-[80px] px-4 relative">
+        <div className="max-w-[1280px] mx-auto flex items-center justify-between h-[96px] px-5 relative">
           {/* Mobile burger */}
           <button
             className="hidden max-md:flex flex-col gap-[5px] bg-transparent border-none cursor-pointer absolute left-4 z-10"
@@ -93,9 +93,13 @@ export default function Navbar() {
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
               alt="Arif Automation Hub"
-              width={56}
-              height={56}
-              className="rounded-[10px] max-md:w-12 max-md:h-12"
+              width={80}
+              height={80}
+              className="rounded-[14px] max-md:w-[60px] max-md:h-[60px]"
+              style={{
+                boxShadow: "var(--logo-glow)",
+                background: "var(--logo-bg)",
+              }}
             />
             <span
               className="font-display font-bold text-xl max-md:hidden"
@@ -117,7 +121,7 @@ export default function Navbar() {
                   onMouseLeave={handleMegaLeave}
                 >
                   <button
-                    className="flex items-center gap-1 bg-transparent border-none cursor-pointer transition-colors duration-300 text-sm font-medium px-4 py-2 rounded-lg"
+                    className="flex items-center gap-1 bg-transparent border-none cursor-pointer transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-lg"
                     style={{ color: "var(--text-secondary)" }}
                     onClick={() => setMegaOpen(!megaOpen)}
                   >
@@ -231,7 +235,7 @@ export default function Navbar() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="no-underline text-sm font-medium px-4 py-2 rounded-lg transition-colors duration-300"
+                    className="no-underline text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-300"
                     style={{
                       color:
                         pathname === link.href
@@ -251,7 +255,7 @@ export default function Navbar() {
             <ThemeToggle />
             <Link
               href="/free-audit"
-              className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
+              className="px-4 py-2.5 rounded-xl text-[13px] font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               style={{
                 background: "var(--gradient-blue)",
                 boxShadow: "0 4px 15px var(--shadow-glow)",
@@ -296,9 +300,13 @@ export default function Navbar() {
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
               alt="Arif Automation Hub"
-              width={48}
-              height={48}
-              className="rounded-[10px]"
+              width={64}
+              height={64}
+              className="rounded-[14px]"
+              style={{
+                boxShadow: "var(--logo-glow)",
+                background: "var(--logo-bg)",
+              }}
             />
             <span
               className="font-display font-bold text-base"

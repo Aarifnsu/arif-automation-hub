@@ -251,7 +251,7 @@ export default async function JobDetailPage({
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div
-              className="rounded-2xl p-6 sticky top-24"
+              className="rounded-2xl p-6 sticky top-[112px]"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--card-border)",
