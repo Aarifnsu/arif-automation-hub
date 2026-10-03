@@ -104,7 +104,14 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <ul className="flex items-center gap-0.5 lg:gap-1 list-none max-md:hidden shrink min-w-0">
+          <ul
+            className="flex items-center gap-0.5 lg:gap-1 list-none max-md:hidden shrink min-w-0 absolute left-1/2 -translate-x-1/2 px-3 py-2 rounded-2xl"
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid var(--card-border)",
+              boxShadow: "0 4px 20px var(--shadow-color)",
+            }}
+          >
             {navLinks.map((link) =>
               link.hasMega ? (
                 <li
