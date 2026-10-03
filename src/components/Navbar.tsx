@@ -101,12 +101,6 @@ export default function Navbar() {
                 background: "var(--logo-bg)",
               }}
             />
-            <span
-              className="font-display font-bold text-xl max-md:hidden"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Arif<span className="gradient-text">Automation</span>
-            </span>
           </Link>
 
           {/* Desktop menu */}
@@ -308,12 +302,6 @@ export default function Navbar() {
                 background: "var(--logo-bg)",
               }}
             />
-            <span
-              className="font-display font-bold text-base"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Arif<span className="gradient-text">Automation</span>
-            </span>
           </div>
 
           {/* Sidebar links */}
