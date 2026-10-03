@@ -85,6 +85,15 @@ body {
 }
 
 /* ===== ANIMATIONS ===== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes shimmer {
   0%,
   100% {
