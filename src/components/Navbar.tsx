@@ -104,14 +104,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <ul
-            className="flex items-center gap-0.5 lg:gap-1 list-none max-md:hidden shrink min-w-0 absolute left-1/2 -translate-x-1/2 px-3 py-2 rounded-2xl"
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--card-border)",
-              boxShadow: "0 4px 20px var(--shadow-color)",
-            }}
-          >
+          <ul className="flex items-center gap-2 lg:gap-3 list-none max-md:hidden shrink min-w-0 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) =>
               link.hasMega ? (
                 <li
@@ -122,8 +115,13 @@ export default function Navbar() {
                   onMouseLeave={handleMegaLeave}
                 >
                   <button
-                    className="flex items-center gap-1 bg-transparent border-none cursor-pointer transition-colors duration-300 text-sm font-medium px-3 py-2 rounded-lg"
-                    style={{ color: "var(--text-secondary)" }}
+                    className="flex items-center gap-1 border-none cursor-pointer transition-all duration-300 text-sm font-medium px-4 py-2 rounded-xl"
+                    style={{
+                      color: "var(--text-secondary)",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--card-border)",
+                      boxShadow: "0 2px 8px var(--shadow-color)",
+                    }}
                     onClick={() => setMegaOpen(!megaOpen)}
                   >
                     {link.label}
@@ -236,12 +234,15 @@ export default function Navbar() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="no-underline text-sm font-medium px-3 py-2 rounded-lg transition-colors duration-300"
+                    className="no-underline text-sm font-medium px-4 py-2 rounded-xl transition-all duration-300"
                     style={{
                       color:
                         pathname === link.href
                           ? "var(--electric-blue)"
                           : "var(--text-secondary)",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--card-border)",
+                      boxShadow: "0 2px 8px var(--shadow-color)",
                     }}
                   >
                     {link.label}
