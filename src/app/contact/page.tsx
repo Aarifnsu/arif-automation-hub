@@ -79,8 +79,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="text-xs uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>Email Us</div>
-                <a href="mailto:hello@arifautomationhub.com" className="text-sm font-semibold no-underline" style={{ color: "var(--text-primary)" }}>
-                  hello@arifautomationhub.com
+                <a href="mailto:arif.frelance@gmail.com" className="text-sm font-semibold no-underline" style={{ color: "var(--text-primary)" }}>
+                  arif.frelance@gmail.com
                 </a>
               </div>
             </div>

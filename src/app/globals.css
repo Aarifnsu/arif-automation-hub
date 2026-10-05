@@ -27,14 +27,15 @@
   --bar-btn-border: rgba(255, 255, 255, 0.3);
   --logo-glow: 0 0 16px rgba(37, 99, 235, 0.5), 0 0 32px rgba(6, 182, 212, 0.25);
   --logo-bg: rgba(255, 255, 255, 0.08);
+  --nav-pill-active-bg: #16305a;
 }
 
 :root[data-theme="light"] {
   --bg-primary: #f0f7ff;
   --bg-secondary: #e8f2ff;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f5faff;
-  --card-border: #c8ddf5;
+  --bg-card: linear-gradient(145deg, #e9f2ff 0%, #dfecff 100%);
+  --bg-card-hover: linear-gradient(145deg, #eef5ff 0%, #e4efff 100%);
+  --card-border: #b9d2f0;
   --text-primary: #0c1929;
   --text-secondary: #3d5a80;
   --text-muted: #6b8ab5;
@@ -55,6 +56,7 @@
   --bar-btn-border: rgba(255, 255, 255, 0.5);
   --logo-glow: 0 2px 12px rgba(37, 99, 235, 0.25), 0 0 24px rgba(6, 182, 212, 0.12);
   --logo-bg: rgba(37, 99, 235, 0.06);
+  --nav-pill-active-bg: #dbe9ff;
 }
 
 @theme inline {

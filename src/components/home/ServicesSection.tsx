@@ -46,18 +46,13 @@ export default function ServicesSection() {
         </p>
       </div>
 
-      {/* Services grid — 6-column layout on desktop */}
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-6">
-        {serviceCards.map((card, i) => (
+      {/* Services grid — 3 + 3 on desktop */}
+      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {serviceCards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className={`group relative overflow-hidden rounded-[20px] p-8 no-underline transition-all duration-400 cursor-pointer
-              ${i < 3 ? "xl:col-span-2" : ""}
-              ${i === 3 ? "xl:col-start-2 xl:col-span-2" : ""}
-              ${i === 4 ? "xl:col-span-2" : ""}
-              ${i === 5 ? "xl:col-start-2 xl:col-span-2 2xl:col-start-auto" : ""}
-            `}
+            className="group relative overflow-hidden rounded-[20px] p-8 no-underline transition-all duration-400 cursor-pointer"
             style={{
               background: "var(--bg-card)",
               border: "1px solid var(--card-border)",

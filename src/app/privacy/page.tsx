@@ -85,7 +85,7 @@ To exercise any of these rights, please contact us using the information provide
     title: "Contact Us",
     content: `If you have any questions about this Privacy Policy or our data practices, please contact us at:
 
-- Email: hello@arifautomationhub.com
+- Email: arif.frelance@gmail.com
 - Website: https://arifautomationhub.com/contact
 
 We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.`,

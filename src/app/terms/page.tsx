@@ -99,7 +99,7 @@ By using our services, you consent to the exclusive jurisdiction of the applicab
     title: "Contact",
     content: `If you have any questions about these Terms of Service, please contact us at:
 
-- Email: hello@arifautomationhub.com
+- Email: arif.frelance@gmail.com
 - Website: https://arifautomationhub.com/contact
 
 These terms were last updated on October 1, 2026.`,

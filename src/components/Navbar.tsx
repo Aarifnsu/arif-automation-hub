@@ -12,7 +12,8 @@ export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarServicesOpen, setSidebarServicesOpen] = useState(false);
   const pathname = usePathname();
-  const megaRef = useRef<HTMLDivElement>(null);
+  const megaRef = useRef<HTMLLIElement>(null);
+  const megaPanelRef = useRef<HTMLDivElement>(null);
   const megaTimeout = useRef<NodeJS.Timeout | null>(null);
 
   // Close mega menu on route change
@@ -24,9 +25,10 @@ export default function Navbar() {
   // Close mega menu on click outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (megaRef.current && !megaRef.current.contains(e.target as Node)) {
-        setMegaOpen(false);
-      }
+      const t = e.target as Node;
+      const inTrigger = megaRef.current?.contains(t);
+      const inPanel = megaPanelRef.current?.contains(t);
+      if (!inTrigger && !inPanel) setMegaOpen(false);
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -110,27 +112,28 @@ export default function Navbar() {
                 <li
                   key={link.label}
                   className="relative"
-                  ref={megaRef as unknown as React.RefObject<HTMLLIElement>}
+                  ref={megaRef}
                   onMouseEnter={handleMegaEnter}
                   onMouseLeave={handleMegaLeave}
                 >
                   <button
-                    className="flex items-center gap-1.5 border-none cursor-pointer transition-all duration-300 text-[13px] font-semibold px-5 py-2.5 rounded-full hover:-translate-y-0.5"
+                    className="flex items-center gap-1.5 cursor-pointer transition-colors duration-200 text-[13px] font-semibold px-5 py-2.5 rounded-full"
                     style={{
-                      color: "var(--text-secondary)",
-                      background: "var(--bg-card)",
-                      border: "1px solid var(--card-border)",
+                      color: megaOpen ? "var(--electric-blue)" : "var(--text-secondary)",
+                      background: megaOpen ? "var(--nav-pill-active-bg)" : "var(--bg-card)",
+                      border: `1px solid ${megaOpen ? "var(--electric-blue)" : "var(--card-border)"}`,
                       boxShadow: "0 2px 10px var(--shadow-color)",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = "0 4px 16px var(--shadow-glow)";
                       e.currentTarget.style.borderColor = "var(--electric-blue)";
                       e.currentTarget.style.color = "var(--electric-blue)";
+                      e.currentTarget.style.background = "var(--nav-pill-active-bg)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = "0 2px 10px var(--shadow-color)";
+                      if (megaOpen) return;
                       e.currentTarget.style.borderColor = "var(--card-border)";
                       e.currentTarget.style.color = "var(--text-secondary)";
+                      e.currentTarget.style.background = "var(--bg-card)";
                     }}
                     onClick={() => setMegaOpen(!megaOpen)}
                   >
@@ -148,124 +151,33 @@ export default function Navbar() {
                     </svg>
                   </button>
 
-                  {/* Mega Menu */}
-                  <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl transition-all duration-300 overflow-hidden"
-                    style={{
-                      width: "min(780px, calc(100vw - 2rem))",
-                      padding: megaOpen ? "20px" : "0",
-                      background: "var(--bg-card)",
-                      border: megaOpen
-                        ? "1px solid var(--card-border)"
-                        : "none",
-                      opacity: megaOpen ? 1 : 0,
-                      visibility: megaOpen ? "visible" : "hidden",
-                      transform: `translateX(-50%) ${megaOpen ? "translateY(0)" : "translateY(-10px)"}`,
-                      maxHeight: megaOpen ? "600px" : "0",
-                    }}
-                  >
-                    <div
-                      className="grid"
-                      style={{
-                        gridTemplateColumns: "repeat(3, 1fr)",
-                        gap: "12px",
-                      }}
-                    >
-                      {serviceCategories.map((cat, i) => (
-                        <div key={i}>
-                          <h4
-                            className="text-white text-xs font-bold rounded-lg uppercase tracking-wider"
-                            style={{
-                              background: cat.gradient,
-                              padding: "7px 14px",
-                              marginBottom: "6px",
-                            }}
-                          >
-                            {cat.title}
-                          </h4>
-                          <div className="flex flex-col">
-                            {cat.links.map((subLink, j) => (
-                              <Link
-                                key={j}
-                                href={subLink.href}
-                                className="no-underline rounded-md transition-all duration-200 flex items-center"
-                                style={{
-                                  color: "var(--text-secondary)",
-                                  padding: "5px 10px 5px 12px",
-                                  fontSize: "13.5px",
-                                  lineHeight: "1.3",
-                                }}
-                                onMouseEnter={(e) =>
-                                  (e.currentTarget.style.color =
-                                    "var(--electric-blue)")
-                                }
-                                onMouseLeave={(e) =>
-                                  (e.currentTarget.style.color =
-                                    "var(--text-secondary)")
-                                }
-                              >
-                                <span
-                                  className="mr-1.5"
-                                  style={{
-                                    fontWeight: 900,
-                                    fontSize: "16px",
-                                  }}
-                                >
-                                  →
-                                </span>
-                                {subLink.label}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div
-                      className="mt-4 pt-3 flex items-center justify-between"
-                      style={{ borderTop: "1px solid var(--card-border)" }}
-                    >
-                      <span
-                        className="text-sm"
-                        style={{ color: "var(--text-muted)" }}
-                      >
-                        Need help choosing?
-                      </span>
-                      <Link
-                        href="/free-audit"
-                        className="text-sm font-semibold no-underline transition-opacity hover:opacity-80"
-                        style={{ color: "var(--electric-blue)" }}
-                      >
-                        Get a Free Audit →
-                      </Link>
-                    </div>
-                  </div>
                 </li>
               ) : (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="no-underline text-[13px] font-semibold px-5 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5"
+                    className="no-underline text-[13px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200"
                     style={{
                       color:
                         pathname === link.href
                           ? "var(--electric-blue)"
                           : "var(--text-secondary)",
-                      background: pathname === link.href ? "rgba(37, 99, 235, 0.08)" : "var(--bg-card)",
+                      background: pathname === link.href ? "var(--nav-pill-active-bg)" : "var(--bg-card)",
                       border: pathname === link.href ? "1px solid var(--electric-blue)" : "1px solid var(--card-border)",
-                      boxShadow: pathname === link.href ? "0 2px 12px var(--shadow-glow)" : "0 2px 10px var(--shadow-color)",
+                      boxShadow: "0 2px 10px var(--shadow-color)",
                     }}
                     onMouseEnter={(e) => {
                       if (pathname !== link.href) {
-                        e.currentTarget.style.boxShadow = "0 4px 16px var(--shadow-glow)";
                         e.currentTarget.style.borderColor = "var(--electric-blue)";
                         e.currentTarget.style.color = "var(--electric-blue)";
+                        e.currentTarget.style.background = "var(--nav-pill-active-bg)";
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (pathname !== link.href) {
-                        e.currentTarget.style.boxShadow = "0 2px 10px var(--shadow-color)";
                         e.currentTarget.style.borderColor = "var(--card-border)";
                         e.currentTarget.style.color = "var(--text-secondary)";
+                        e.currentTarget.style.background = "var(--bg-card)";
                       }
                     }}
                   >
@@ -275,6 +187,101 @@ export default function Navbar() {
               ),
             )}
           </ul>
+
+                {/* Mega Menu */}
+                <div
+                  ref={megaPanelRef}
+                  onMouseEnter={handleMegaEnter}
+                  onMouseLeave={handleMegaLeave}
+                  className="absolute top-full left-1/2 rounded-2xl shadow-xl transition-all duration-300 overflow-hidden max-md:hidden"
+                  style={{
+                    width: "min(780px, calc(100vw - 2rem))",
+                    padding: megaOpen ? "20px" : "0",
+                    background: "var(--bg-card)",
+                    border: megaOpen
+                      ? "1px solid var(--card-border)"
+                      : "none",
+                    opacity: megaOpen ? 1 : 0,
+                    visibility: megaOpen ? "visible" : "hidden",
+                    transform: `translateX(-50%) ${megaOpen ? "translateY(0)" : "translateY(-10px)"}`,
+                    maxHeight: megaOpen ? "600px" : "0",
+                  }}
+                >
+                  <div
+                    className="grid"
+                    style={{
+                      gridTemplateColumns: "repeat(3, 1fr)",
+                      gap: "12px",
+                    }}
+                  >
+                    {serviceCategories.map((cat, i) => (
+                      <div key={i}>
+                        <h4
+                          className="text-white text-xs font-bold rounded-lg uppercase tracking-wider"
+                          style={{
+                            background: cat.gradient,
+                            padding: "7px 14px",
+                            marginBottom: "6px",
+                          }}
+                        >
+                          {cat.title}
+                        </h4>
+                        <div className="flex flex-col">
+                          {cat.links.map((subLink, j) => (
+                            <Link
+                              key={j}
+                              href={subLink.href}
+                              className="no-underline rounded-md transition-all duration-200 flex items-center"
+                              style={{
+                                color: "var(--text-secondary)",
+                                padding: "5px 10px 5px 12px",
+                                fontSize: "13.5px",
+                                lineHeight: "1.3",
+                              }}
+                              onMouseEnter={(e) =>
+                                (e.currentTarget.style.color =
+                                  "var(--electric-blue)")
+                              }
+                              onMouseLeave={(e) =>
+                                (e.currentTarget.style.color =
+                                  "var(--text-secondary)")
+                              }
+                            >
+                              <span
+                                className="mr-1.5"
+                                style={{
+                                  fontWeight: 900,
+                                  fontSize: "16px",
+                                }}
+                              >
+                                →
+                              </span>
+                              {subLink.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div
+                    className="mt-4 pt-3 flex items-center justify-between"
+                    style={{ borderTop: "1px solid var(--card-border)" }}
+                  >
+                    <span
+                      className="text-sm"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      Need help choosing?
+                    </span>
+                    <Link
+                      href="/free-audit"
+                      className="text-sm font-semibold no-underline transition-opacity hover:opacity-80"
+                      style={{ color: "var(--electric-blue)" }}
+                    >
+                      Get a Free Audit →
+                    </Link>
+                  </div>
+                </div>
 
           {/* Desktop right side */}
           <div className="flex items-center gap-3 max-md:hidden shrink-0">

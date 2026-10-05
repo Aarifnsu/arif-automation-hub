@@ -50,14 +50,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      data-theme="light"
+      data-theme="dark"
       className={`${inter.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');`,
+            __html: `document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');`,
           }}
         />
       </head>
