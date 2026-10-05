@@ -35,12 +35,9 @@ function Chevron({ open }: { open: boolean }) {
     <span
       className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300"
       style={{
-        background: "var(--gradient-blue)",
-        color: "#fff",
-        boxShadow: open
-          ? "0 0 0 4px rgba(37, 99, 235, 0.25), 0 4px 14px rgba(37, 99, 235, 0.5)"
-          : "0 4px 14px rgba(37, 99, 235, 0.45)",
-        animation: open ? "none" : "pulse-ring 2.2s ease-out infinite",
+        background: open ? "rgba(37, 99, 235, 0.28)" : "rgba(37, 99, 235, 0.16)",
+        border: "1.5px solid rgba(37, 99, 235, 0.45)",
+        color: "var(--electric-blue)",
       }}
     >
       <svg

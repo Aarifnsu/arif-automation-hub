@@ -63,7 +63,7 @@ export default function PortfolioFilter({
       </div>
 
       {/* Project cards — swipe on mobile, grid on desktop */}
-      <MobileCarousel key={filtered.map((p) => p.slug).join("|")} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
+      <MobileCarousel autoScrollMs={3000} key={filtered.map((p) => p.slug).join("|")} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
         {filtered.map((project) => (
           <div
             key={project.slug}

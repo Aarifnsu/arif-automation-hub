@@ -69,7 +69,7 @@ export default function ServicesPage() {
         style={{ background: "var(--bg-secondary)", transition: "background 0.4s" }}
       >
         <div className="max-w-[1280px] mx-auto">
-        <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
+        <MobileCarousel autoScrollMs={3000} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceCards.map((card) => (
             <div
               key={card.title}

@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
 
       {/* Testimonials — auto-sliding carousel on mobile, grid on desktop */}
       <div className="max-w-[1280px] mx-auto">
-      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6" autoScrollMs={4500}>
+      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6" autoScrollMs={3000}>
         {testimonials.map((t) => (
           <div
             key={t.name}

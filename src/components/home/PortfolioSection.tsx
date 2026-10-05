@@ -64,7 +64,7 @@ export default function PortfolioSection() {
 
       {/* Portfolio — swipe on mobile, grid on desktop */}
       <div className="max-w-[1280px] mx-auto">
-      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
+      <MobileCarousel autoScrollMs={3000} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p) => (
           <div
             key={p.title}

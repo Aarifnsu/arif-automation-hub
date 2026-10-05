@@ -49,7 +49,7 @@ export default function ServicesSection() {
 
       {/* Services — swipe carousel on mobile, 3 + 3 grid on desktop */}
       <div className="max-w-[1280px] mx-auto">
-      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
+      <MobileCarousel autoScrollMs={3000} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
         {serviceCards.map((card) => (
           <Link
             key={card.title}

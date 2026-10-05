@@ -101,7 +101,7 @@ export default function WhyUsSection() {
 
       {/* Cards — swipe on mobile, grid on desktop */}
       <div className="max-w-[1280px] mx-auto">
-      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
+      <MobileCarousel autoScrollMs={3000} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((f) => (
           <div
             key={f.title}
