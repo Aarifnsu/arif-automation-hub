@@ -73,11 +73,13 @@
   --font-display: "Space Grotesk", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/*
+  NOTE: Do NOT add an unlayered `* { margin:0; padding:0 }` reset here.
+  Tailwind v4 puts all utilities inside `@layer utilities`, and any
+  unlayered rule beats every layered rule — so a global reset silently
+  kills p-*, px-*, m-*, mb-* etc. across the whole site.
+  Tailwind's own preflight (in @layer base) already resets margin/padding.
+*/
 
 body {
   font-family: "Inter", sans-serif;
