@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[520px] md:min-h-[600px] flex items-center"
+      className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 md:min-h-[560px] flex items-center"
       style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
     >
       {/* Background effects */}
@@ -28,7 +28,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="max-w-[1280px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+      <div className="max-w-[1280px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10">
         {/* Text */}
         <div>
           <div
@@ -51,7 +51,7 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="font-display text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] mb-6"
+            className="font-display text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] mb-4 md:mb-6"
             style={{ color: "var(--text-primary)" }}
           >
             Build. Automate.
@@ -60,7 +60,7 @@ export default function HeroSection() {
           </h1>
 
           <p
-            className="text-lg md:text-xl leading-relaxed mb-8 max-w-xl"
+            className="text-base md:text-xl leading-relaxed mb-6 md:mb-8 max-w-xl"
             style={{ color: "var(--text-secondary)" }}
           >
             We craft high-converting Shopify stores, build AI-powered automation
@@ -68,7 +68,7 @@ export default function HeroSection() {
             for businesses worldwide.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-12">
             <Link
               href="/contact"
               className="px-8 py-4 rounded-xl text-base font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 text-center"
@@ -93,7 +93,7 @@ export default function HeroSection() {
           </div>
 
           <div
-            className="flex flex-wrap gap-6 md:gap-10 pt-8"
+            className="flex flex-nowrap overflow-x-auto gap-5 md:gap-10 pt-6 md:pt-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             style={{ borderTop: "1px solid var(--card-border)" }}
           >
             {[
@@ -101,12 +101,12 @@ export default function HeroSection() {
               { number: "50+", label: "Happy Clients" },
               { number: "15+", label: "Countries Served" },
             ].map((stat) => (
-              <div key={stat.label}>
-                <div className="font-display text-3xl font-bold gradient-text">
+              <div key={stat.label} className="shrink-0">
+                <div className="font-display text-2xl md:text-3xl font-bold gradient-text">
                   {stat.number}
                 </div>
                 <div
-                  className="text-sm mt-0.5"
+                  className="text-xs md:text-sm mt-0.5 whitespace-nowrap"
                   style={{ color: "var(--text-muted)" }}
                 >
                   {stat.label}

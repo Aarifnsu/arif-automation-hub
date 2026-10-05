@@ -9,12 +9,13 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const project = portfolioProjects.find((p) => p.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = portfolioProjects.find((p) => p.slug === slug);
   if (!project) return { title: "Project Not Found" };
 
   return {
@@ -23,19 +24,20 @@ export function generateMetadata({
   };
 }
 
-export default function CaseStudyPage({
+export default async function CaseStudyPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = portfolioProjects.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const project = portfolioProjects.find((p) => p.slug === slug);
   if (!project) notFound();
 
   return (
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
+        className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 min-h-[400px] flex items-center"
         style={{ background: project.gradient, transition: "background 0.4s" }}
       >
         <div className="absolute inset-0 pointer-events-none opacity-30">
@@ -69,7 +71,7 @@ export default function CaseStudyPage({
 
       {/* Challenge */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -99,7 +101,7 @@ export default function CaseStudyPage({
 
       {/* Solution */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
@@ -129,14 +131,14 @@ export default function CaseStudyPage({
 
       {/* Results */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-14">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -176,7 +178,7 @@ export default function CaseStudyPage({
 
       {/* Technologies */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
@@ -217,7 +219,7 @@ export default function CaseStudyPage({
       {/* Testimonial */}
       {project.testimonial && (
         <section
-          className="py-24 px-4"
+          className="py-12 md:py-20 px-4"
           style={{
             background: "var(--bg-primary)",
             transition: "background 0.4s",
@@ -264,7 +266,7 @@ export default function CaseStudyPage({
 
       {/* CTA */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",

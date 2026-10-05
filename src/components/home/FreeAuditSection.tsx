@@ -39,7 +39,7 @@ export default function FreeAuditSection() {
 
   return (
     <section
-      className="relative py-24 px-4 overflow-hidden"
+      className="relative py-12 md:py-20 px-4 overflow-hidden"
       style={{
         background: "var(--bg-primary)",
         transition: "background 0.4s",
@@ -86,7 +86,7 @@ export default function FreeAuditSection() {
         </h2>
 
         <p
-          className="text-[17px] leading-[1.7] mb-10 max-w-[600px] mx-auto"
+          className="text-[15px] md:text-[17px] leading-[1.7] mb-7 md:mb-10 max-w-[600px] mx-auto"
           style={{ color: "var(--text-secondary)" }}
         >
           Share your website details and our expert team will analyze your
@@ -95,11 +95,11 @@ export default function FreeAuditSection() {
         </p>
 
         {/* Feature cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+        <div className="grid grid-cols-3 gap-2.5 md:gap-5 mb-8 md:mb-10">
           {auditFeatures.map((f) => (
             <div
               key={f.title}
-              className="rounded-[14px] p-5"
+              className="rounded-[14px] p-3 md:p-5 flex flex-col items-center md:items-start text-center md:text-left"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--card-border)",
@@ -108,13 +108,13 @@ export default function FreeAuditSection() {
             >
               <div className="mb-2.5" style={{ color: "var(--neon-cyan)" }}>{f.iconSvg}</div>
               <h4
-                className="text-[15px] font-semibold mb-1.5"
+                className="text-[12px] md:text-[15px] font-semibold mb-0 md:mb-1.5 leading-tight"
                 style={{ color: "var(--text-primary)" }}
               >
                 {f.title}
               </h4>
               <p
-                className="text-[13px]"
+                className="hidden md:block text-[13px]"
                 style={{ color: "var(--text-secondary)" }}
               >
                 {f.desc}

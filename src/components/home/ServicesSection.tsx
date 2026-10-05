@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { serviceCards } from "@/data/services";
+import MobileCarousel from "@/components/MobileCarousel";
 
 const serviceImages: Record<string, string> = {
   "🛍️": "/images/shopify-complete-store-solution.webp",
@@ -16,14 +17,14 @@ const serviceImages: Record<string, string> = {
 export default function ServicesSection() {
   return (
     <section
-      className="py-24 px-4"
+      className="py-12 md:py-20 px-4"
       style={{
         background: "var(--bg-secondary)",
         transition: "background 0.4s",
       }}
     >
       {/* Section header */}
-      <div className="text-center max-w-[800px] mx-auto mb-16">
+      <div className="text-center max-w-[800px] mx-auto mb-8 md:mb-14">
         <span
           className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
           style={{ color: "var(--neon-cyan)" }}
@@ -46,13 +47,14 @@ export default function ServicesSection() {
         </p>
       </div>
 
-      {/* Services grid — 3 + 3 on desktop */}
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Services — swipe carousel on mobile, 3 + 3 grid on desktop */}
+      <div className="max-w-[1280px] mx-auto">
+      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
         {serviceCards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className="group relative overflow-hidden rounded-[20px] p-8 no-underline transition-all duration-400 cursor-pointer"
+            className="group relative overflow-hidden rounded-[20px] p-6 md:p-8 no-underline transition-all duration-400 cursor-pointer h-full w-full"
             style={{
               background: "var(--bg-card)",
               border: "1px solid var(--card-border)",
@@ -108,6 +110,7 @@ export default function ServicesSection() {
             </span>
           </Link>
         ))}
+      </MobileCarousel>
       </div>
     </section>
   );

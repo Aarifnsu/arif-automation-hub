@@ -1,3 +1,5 @@
+import MobileCarousel from "@/components/MobileCarousel";
+
 export default function WhyUsSection() {
   const features = [
     {
@@ -67,14 +69,14 @@ export default function WhyUsSection() {
 
   return (
     <section
-      className="py-24 px-4"
+      className="py-12 md:py-20 px-4"
       style={{
         background: "var(--bg-primary)",
         transition: "background 0.4s",
       }}
     >
       {/* Section header */}
-      <div className="text-center max-w-[800px] mx-auto mb-16">
+      <div className="text-center max-w-[800px] mx-auto mb-8 md:mb-14">
         <span
           className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
           style={{ color: "var(--neon-cyan)" }}
@@ -97,12 +99,13 @@ export default function WhyUsSection() {
         </p>
       </div>
 
-      {/* Cards grid */}
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Cards — swipe on mobile, grid on desktop */}
+      <div className="max-w-[1280px] mx-auto">
+      <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((f) => (
           <div
             key={f.title}
-            className="rounded-[20px] p-9 text-center transition-all duration-300 hover:-translate-y-1.5"
+            className="rounded-[20px] p-6 md:p-9 text-center transition-all duration-300 hover:-translate-y-1.5 h-full w-full"
             style={{
               background: "var(--bg-card)",
               border: "1px solid var(--card-border)",
@@ -128,6 +131,7 @@ export default function WhyUsSection() {
             </p>
           </div>
         ))}
+      </MobileCarousel>
       </div>
     </section>
   );

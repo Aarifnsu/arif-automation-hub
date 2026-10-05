@@ -34,7 +34,7 @@ export default async function JobDetailPage({
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-20 md:py-24 px-4"
+        className="relative overflow-hidden py-12 md:py-20 px-4"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -91,7 +91,7 @@ export default async function JobDetailPage({
       </section>
 
       {/* Content */}
-      <section className="py-20 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="py-12 md:py-18 px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-10">
@@ -251,7 +251,7 @@ export default async function JobDetailPage({
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div
-              className="rounded-2xl p-6 sticky top-[112px]"
+              className="rounded-2xl p-6 sticky top-[96px] xl:top-[112px]"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--card-border)",

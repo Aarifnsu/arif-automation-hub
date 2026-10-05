@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AuditForm from "@/components/AuditForm";
+import PaymentPolicy from "@/components/PaymentPolicy";
 
 export const metadata: Metadata = {
   title: "Free Website Audit",
@@ -51,7 +52,7 @@ export default function FreeAuditPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
+        className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 min-h-[400px] flex items-center"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -95,7 +96,7 @@ export default function FreeAuditPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="py-12 md:py-20 px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[1280px] mx-auto">
           <h2
             className="font-display text-3xl md:text-4xl font-bold text-center mb-4"
@@ -104,7 +105,7 @@ export default function FreeAuditPage() {
             What&apos;s <span className="gradient-text">Included</span>
           </h2>
           <p
-            className="text-center text-lg mb-16 max-w-2xl mx-auto"
+            className="text-center text-lg mb-8 md:mb-14 max-w-2xl mx-auto"
             style={{ color: "var(--text-secondary)" }}
           >
             Our comprehensive audit covers three critical areas of your online
@@ -153,7 +154,7 @@ export default function FreeAuditPage() {
       </section>
 
       {/* Audit Form */}
-      <section className="py-24 px-4" style={{ background: "var(--bg-primary)" }}>
+      <section className="py-12 md:py-20 px-4" style={{ background: "var(--bg-primary)" }}>
         <div className="max-w-[800px] mx-auto">
           <h2
             className="font-display text-3xl md:text-4xl font-bold text-center mb-4"
@@ -182,7 +183,7 @@ export default function FreeAuditPage() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="py-10 md:py-16 px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[1280px] mx-auto text-center">
           <p
             className="font-display text-xl font-bold mb-2"
@@ -216,6 +217,8 @@ export default function FreeAuditPage() {
           </div>
         </div>
       </section>
+
+      <PaymentPolicy />
     </>
   );
 }

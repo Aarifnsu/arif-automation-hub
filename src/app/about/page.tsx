@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { teamMembers } from "@/data/team";
+import { marketplaces } from "@/data/marketplaces";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -60,7 +61,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
+        className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 min-h-[400px] flex items-center"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -112,7 +113,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
@@ -179,7 +180,7 @@ export default function AboutPage() {
 
       {/* Stats Bar */}
       <section
-        className="py-20 px-4"
+        className="py-12 md:py-18 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -212,14 +213,14 @@ export default function AboutPage() {
 
       {/* Team */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-14">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -252,17 +253,26 @@ export default function AboutPage() {
                 }}
               >
                 {/* Photo or gradient circle with initials */}
-                {member.name === "Arif" ? (
-                  <Image
-                    src="/images/arif-automation-hub-founder-portrait-transparent.webp"
-                    alt="Arif Rahman"
-                    width={80}
-                    height={80}
-                    className="rounded-full object-cover mx-auto mb-5"
-                  />
+                {member.photo ? (
+                  <div
+                    className="w-28 h-28 rounded-full overflow-hidden mx-auto mb-5"
+                    style={{
+                      border: "3px solid var(--card-border)",
+                      boxShadow: "0 6px 20px var(--shadow-glow)",
+                      background: member.gradient,
+                    }}
+                  >
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      width={112}
+                      height={112}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
                 ) : (
                   <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5"
+                    className="w-28 h-28 rounded-full flex items-center justify-center mx-auto mb-5"
                     style={{ background: member.gradient }}
                   >
                     <span className="text-white font-display font-bold text-xl">
@@ -312,19 +322,66 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
+          {/* Marketplace profiles */}
+          <div className="mt-10 md:mt-14 text-center">
+            <div
+              className="text-[12px] uppercase tracking-[2px] font-semibold mb-4"
+              style={{ color: "var(--text-muted)" }}
+            >
+              Also available on
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {marketplaces.map((m) => (
+                <a
+                  key={m.name}
+                  href={m.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl no-underline transition-all duration-300 hover:-translate-y-0.5"
+                  style={{
+                    background: "var(--bg-card)",
+                    border: "1px solid var(--card-border)",
+                    boxShadow: "0 2px 10px var(--shadow-color)",
+                  }}
+                >
+                  <span
+                    className="w-9 h-9 rounded-xl flex items-center justify-center"
+                    style={{ background: "rgba(34, 197, 94, 0.12)" }}
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                  </span>
+                  <span className="text-left">
+                    <span
+                      className="block text-sm font-bold leading-tight"
+                      style={{ color: "var(--text-primary)" }}
+                    >
+                      {m.name}
+                    </span>
+                    <span
+                      className="block text-[11px]"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      {m.label}
+                    </span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Values */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-14">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -372,7 +429,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",

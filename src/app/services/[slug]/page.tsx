@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { serviceDetails } from "@/data/serviceDetails";
 import FAQAccordion from "@/components/FAQAccordion";
+import PaymentPolicy from "@/components/PaymentPolicy";
 
 const serviceImages: Record<string, string> = {
   "🛍️": "/images/shopify-complete-store-solution.webp",
@@ -48,7 +49,7 @@ export default async function ServiceDetailPage({
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 px-4"
+        className="relative overflow-hidden py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -116,14 +117,14 @@ export default async function ServiceDetailPage({
 
       {/* Features Grid */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-14">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -172,14 +173,14 @@ export default async function ServiceDetailPage({
 
       {/* Process */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[1280px] mx-auto">
-          <div className="text-center max-w-[800px] mx-auto mb-16">
+          <div className="text-center max-w-[800px] mx-auto mb-8 md:mb-14">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -245,143 +246,19 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      {/* Pricing */}
-      <section
-        className="py-24 px-4"
-        style={{
-          background: "var(--bg-secondary)",
-          transition: "background 0.4s",
-        }}
-      >
-        <div className="max-w-[1280px] mx-auto">
-          <div className="text-center mb-16">
-            <span
-              className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
-              style={{ color: "var(--neon-cyan)" }}
-            >
-              Pricing
-            </span>
-            <h2
-              className="font-display text-[clamp(28px,4vw,42px)] font-bold leading-[1.2] mb-4"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Simple, Transparent{" "}
-              <span className="gradient-text">Pricing</span>
-            </h2>
-            <p
-              className="text-base leading-[1.7] max-w-lg mx-auto"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              Choose the plan that fits your needs. All plans include dedicated
-              support and quality delivery.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
-            {service.pricing.map((plan) => (
-              <div
-                key={plan.label}
-                className="relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1"
-                style={{
-                  background: "var(--bg-card)",
-                  border: plan.popular
-                    ? "none"
-                    : "1px solid var(--card-border)",
-                  boxShadow: plan.popular
-                    ? "0 8px 40px var(--shadow-glow)"
-                    : "0 4px 24px var(--shadow-color)",
-                  ...(plan.popular
-                    ? {
-                        backgroundImage: `linear-gradient(var(--bg-card), var(--bg-card)), var(--gradient-blue)`,
-                        backgroundOrigin: "border-box",
-                        backgroundClip: "padding-box, border-box",
-                        border: "2px solid transparent",
-                      }
-                    : {}),
-                }}
-              >
-                {plan.popular && (
-                  <div
-                    className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white"
-                    style={{ background: "var(--gradient-blue)" }}
-                  >
-                    Most Popular
-                  </div>
-                )}
-
-                <h3
-                  className="font-display text-lg font-bold mb-1"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {plan.label}
-                </h3>
-                <p
-                  className="text-sm mb-4"
-                  style={{ color: "var(--text-muted)" }}
-                >
-                  {plan.description}
-                </p>
-
-                <div
-                  className="font-display text-4xl font-extrabold mb-6"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {plan.price}
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((f) => (
-                    <li
-                      key={f}
-                      className="flex items-start gap-2 text-sm"
-                      style={{ color: "var(--text-secondary)" }}
-                    >
-                      <span
-                        className="mt-0.5 flex-shrink-0"
-                        style={{ color: "var(--neon-cyan)" }}
-                      >
-                        &#10003;
-                      </span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/contact"
-                  className="block w-full text-center py-3 rounded-xl text-sm font-semibold no-underline transition-all duration-300 hover:-translate-y-0.5"
-                  style={
-                    plan.popular
-                      ? {
-                          background: "var(--gradient-blue)",
-                          color: "#fff",
-                          boxShadow: "0 4px 20px var(--shadow-glow)",
-                        }
-                      : {
-                          background: "transparent",
-                          border: "1px solid var(--card-border)",
-                          color: "var(--text-primary)",
-                        }
-                  }
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Transparent payment policy (replaces public price tiers) */}
+      <PaymentPolicy />
 
       {/* FAQ */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
         }}
       >
         <div className="max-w-[720px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-14">
             <span
               className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
               style={{ color: "var(--neon-cyan)" }}
@@ -403,7 +280,7 @@ export default async function ServiceDetailPage({
 
       {/* Bottom CTA */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",

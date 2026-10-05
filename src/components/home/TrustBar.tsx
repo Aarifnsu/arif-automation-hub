@@ -8,7 +8,7 @@ export default function TrustBar() {
 
   return (
     <section
-      className="py-20 px-4"
+      className="py-12 md:py-18 px-4"
       style={{
         background: "var(--trust-bg)",
         borderTop: "1px solid var(--card-border)",
@@ -16,16 +16,16 @@ export default function TrustBar() {
         transition: "background 0.4s, border-color 0.4s",
       }}
     >
-      <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-4 gap-2 md:gap-8 text-center">
         {stats.map((stat) => (
           <div key={stat.label}>
             <div
-              className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none gradient-text"
+              className="font-display text-[22px] sm:text-4xl md:text-5xl font-extrabold leading-none gradient-text"
             >
               {stat.number}
             </div>
             <div
-              className="text-[15px] mt-2"
+              className="text-[11px] sm:text-sm md:text-[15px] mt-1.5 md:mt-2 leading-tight"
               style={{ color: "var(--text-secondary)" }}
             >
               {stat.label}

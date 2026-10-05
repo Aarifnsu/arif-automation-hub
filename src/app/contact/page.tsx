@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
+import PaymentPolicy from "@/components/PaymentPolicy";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -13,7 +14,7 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
+        className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 min-h-[400px] flex items-center"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -44,7 +45,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="py-12 md:py-20 px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Contact Form */}
           <div className="md:col-span-1 lg:col-span-3">
@@ -198,6 +199,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <PaymentPolicy />
     </>
   );
 }

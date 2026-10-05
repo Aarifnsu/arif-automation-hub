@@ -14,7 +14,7 @@ export default function PortfolioPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 md:py-32 lg:py-36 px-4 min-h-[400px] flex items-center"
+        className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 min-h-[400px] flex items-center"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",
@@ -57,7 +57,7 @@ export default function PortfolioPage() {
 
       {/* Portfolio Grid with Filter */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-secondary)",
           transition: "background 0.4s",
@@ -73,7 +73,7 @@ export default function PortfolioPage() {
 
       {/* Bottom CTA */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{
           background: "var(--bg-primary)",
           transition: "background 0.4s",

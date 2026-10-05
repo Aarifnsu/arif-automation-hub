@@ -53,7 +53,7 @@ export default function Navbar() {
           borderBottom: "1px solid var(--card-border)",
         }}
       >
-        <div className="max-w-[1280px] mx-auto flex items-center justify-between h-[96px] px-5 relative">
+        <div className="max-w-[1280px] mx-auto flex items-center justify-between h-[80px] xl:h-[96px] px-4 xl:px-5 gap-3 relative">
           {/* Mobile burger */}
           <button
             className="hidden max-md:flex flex-col gap-[5px] bg-transparent border-none cursor-pointer absolute left-4 z-10"
@@ -97,7 +97,7 @@ export default function Navbar() {
               alt="Arif Automation Hub"
               width={80}
               height={80}
-              className="rounded-[14px] max-md:w-[60px] max-md:h-[60px]"
+              className="rounded-[14px] w-[60px] h-[60px] md:w-[64px] md:h-[64px] xl:w-[80px] xl:h-[80px]"
               style={{
                 boxShadow: "var(--logo-glow)",
                 background: "var(--logo-bg)",
@@ -106,7 +106,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop menu */}
-          <ul className="flex items-center gap-3 lg:gap-4 list-none max-md:hidden shrink min-w-0 absolute left-1/2 -translate-x-1/2">
+          <ul className="flex items-center justify-center gap-1.5 lg:gap-2 xl:gap-4 list-none max-md:hidden flex-1 min-w-0 xl:flex-none xl:absolute xl:left-1/2 xl:-translate-x-1/2">
             {navLinks.map((link) =>
               link.hasMega ? (
                 <li
@@ -117,7 +117,7 @@ export default function Navbar() {
                   onMouseLeave={handleMegaLeave}
                 >
                   <button
-                    className="flex items-center gap-1.5 cursor-pointer transition-colors duration-200 text-[13px] font-semibold px-5 py-2.5 rounded-full"
+                    className="flex items-center gap-1 xl:gap-1.5 cursor-pointer transition-colors duration-200 text-[12px] xl:text-[13px] font-semibold px-3 lg:px-3.5 xl:px-5 py-2 xl:py-2.5 rounded-full whitespace-nowrap"
                     style={{
                       color: megaOpen ? "var(--electric-blue)" : "var(--text-secondary)",
                       background: megaOpen ? "var(--nav-pill-active-bg)" : "var(--bg-card)",
@@ -156,7 +156,7 @@ export default function Navbar() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="no-underline text-[13px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200"
+                    className="no-underline text-[12px] xl:text-[13px] font-semibold px-3 lg:px-3.5 xl:px-5 py-2 xl:py-2.5 rounded-full transition-colors duration-200 whitespace-nowrap"
                     style={{
                       color:
                         pathname === link.href
@@ -284,11 +284,11 @@ export default function Navbar() {
                 </div>
 
           {/* Desktop right side */}
-          <div className="flex items-center gap-3 max-md:hidden shrink-0">
+          <div className="flex items-center gap-2 xl:gap-3 max-md:hidden shrink-0">
             <ThemeToggle />
             <Link
               href="/free-audit"
-              className="px-4 py-2.5 rounded-xl text-[13px] font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
+              className="px-3 xl:px-4 py-2 xl:py-2.5 rounded-xl text-[12px] xl:text-[13px] font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               style={{
                 background: "var(--gradient-blue)",
                 boxShadow: "0 4px 15px var(--shadow-glow)",

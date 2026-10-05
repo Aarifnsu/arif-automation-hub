@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function FinalCTA() {
   return (
     <section
-      className="py-24 px-4 text-center"
+      className="py-12 md:py-20 px-4 text-center"
       style={{
         background:
           "linear-gradient(180deg, var(--bg-secondary), var(--bg-primary))",
@@ -20,7 +20,7 @@ export default function FinalCTA() {
         </h2>
 
         <p
-          className="text-[17px] leading-[1.7] mb-9"
+          className="text-[15px] md:text-[17px] leading-[1.7] mb-7 md:mb-9"
           style={{ color: "var(--text-secondary)" }}
         >
           Let&apos;s build something amazing together. Whether you need a new

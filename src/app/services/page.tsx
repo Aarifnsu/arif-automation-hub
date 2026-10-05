@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { serviceCards } from "@/data/services";
+import MobileCarousel from "@/components/MobileCarousel";
 
 const serviceImages: Record<string, string> = {
   "🛍️": "/images/shopify-complete-store-solution.webp",
@@ -23,7 +24,7 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-24 px-4"
+        className="relative overflow-hidden py-12 md:py-20 px-4"
         style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -64,14 +65,15 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{ background: "var(--bg-secondary)", transition: "background 0.4s" }}
       >
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-[1280px] mx-auto">
+        <MobileCarousel desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceCards.map((card) => (
             <div
               key={card.title}
-              className="group rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1"
+              className="group rounded-2xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 h-full w-full"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--card-border)",
@@ -127,12 +129,13 @@ export default function ServicesPage() {
               </Link>
             </div>
           ))}
+        </MobileCarousel>
         </div>
       </section>
 
       {/* Bottom CTA */}
       <section
-        className="py-24 px-4"
+        className="py-12 md:py-20 px-4"
         style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
       >
         <div

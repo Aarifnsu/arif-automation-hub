@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PaymentPolicy from "@/components/PaymentPolicy";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -28,15 +29,16 @@ The specific scope, deliverables, and timeline for each project will be outlined
   },
   {
     title: "Payment Terms",
-    content: `Payment terms will be outlined in individual project proposals or service agreements. General payment terms include:
+    content: `We do not publish fixed prices because every project is different. Our payment process is simple and fully transparent:
 
-- A deposit may be required before work begins, typically 30-50% of the total project cost
-- Remaining payments are due upon completion of agreed milestones or project delivery
-- Invoices are due within 14 days of issuance unless otherwise agreed
-- Late payments may incur additional fees
+- No hidden charges — the price is agreed only after a free audit and a final meeting where we understand your project, scope, and requirements in detail
+- Nothing is charged before that final meeting
+- Once agreed, the price is fixed in writing; no extra costs are added without your prior approval
+- Payment is accepted only through supported bank transfer, and an official money receipt is issued for every payment
+- Milestone or deposit arrangements, if any, are agreed with you in writing before work begins
 - All prices are quoted in USD unless otherwise specified
 
-We accept payments via bank transfer, PayPal, Wise, and other methods as agreed upon. Refund policies are determined on a per-project basis and will be outlined in the service agreement.`,
+Important: this website does not process any payments. We never use third-party payment links, agents, or intermediaries. The only other verified way to hire us is through our official marketplace profiles (Upwork, SEOClerk), where payment is handled by that platform's own secure system. If anyone asks you to pay on our behalf through any other channel, it is not us — please contact us directly to verify. Refund policies are determined on a per-project basis and will be outlined in the service agreement.`,
   },
   {
     title: "Intellectual Property",
@@ -111,7 +113,7 @@ export default function TermsPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-20 md:py-24 px-4"
+        className="relative overflow-hidden py-12 md:py-20 px-4"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="max-w-[1280px] mx-auto relative z-10">
@@ -128,7 +130,7 @@ export default function TermsPage() {
       </section>
 
       {/* Content */}
-      <section className="py-20 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="py-12 md:py-18 px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[800px] mx-auto">
           <div
             className="rounded-2xl p-6 md:p-10"
@@ -167,6 +169,8 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
+
+      <PaymentPolicy />
     </>
   );
 }

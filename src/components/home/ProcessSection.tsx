@@ -24,14 +24,14 @@ export default function ProcessSection() {
 
   return (
     <section
-      className="py-24 px-4"
+      className="py-12 md:py-20 px-4"
       style={{
         background: "var(--bg-primary)",
         transition: "background 0.4s",
       }}
     >
       {/* Section header */}
-      <div className="text-center max-w-[800px] mx-auto mb-16">
+      <div className="text-center max-w-[800px] mx-auto mb-8 md:mb-14">
         <span
           className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
           style={{ color: "var(--neon-cyan)" }}
@@ -54,7 +54,7 @@ export default function ProcessSection() {
       </div>
 
       {/* Steps */}
-      <div className="relative max-w-[1280px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="relative max-w-[1280px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 md:gap-8">
         {/* Connecting line (desktop only) */}
         <div
           className="hidden lg:block absolute h-[2px] opacity-30"
@@ -70,7 +70,7 @@ export default function ProcessSection() {
         {steps.map((s) => (
           <div key={s.num} className="relative text-center">
             <div
-              className="w-20 h-20 mx-auto mb-5 rounded-full flex items-center justify-center font-display text-[28px] font-bold relative z-[2]"
+              className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-5 rounded-full flex items-center justify-center font-display text-[22px] md:text-[28px] font-bold relative z-[2]"
               style={{
                 background: "var(--bg-card)",
                 border: "2px solid var(--card-border)",

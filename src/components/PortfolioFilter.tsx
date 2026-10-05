@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { PortfolioProject } from "@/data/portfolio";
+import MobileCarousel from "@/components/MobileCarousel";
 
 const portfolioImages: Record<string, string> = {
   "🛍️": "/images/shopify-complete-store-solution.webp",
@@ -61,12 +62,12 @@ export default function PortfolioFilter({
         ))}
       </div>
 
-      {/* Project cards grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Project cards — swipe on mobile, grid on desktop */}
+      <MobileCarousel key={filtered.map((p) => p.slug).join("|")} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
         {filtered.map((project) => (
           <div
             key={project.slug}
-            className="rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1"
+            className="rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1 h-full w-full"
             style={{
               background: "var(--bg-card)",
               border: "1px solid var(--card-border)",
@@ -74,7 +75,7 @@ export default function PortfolioFilter({
           >
             {/* Gradient area with icon */}
             <div
-              className="h-48 flex items-center justify-center relative"
+              className="h-40 md:h-48 flex items-center justify-center relative"
               style={{ background: project.gradient }}
             >
               <Image
@@ -124,7 +125,7 @@ export default function PortfolioFilter({
             </div>
           </div>
         ))}
-      </div>
+      </MobileCarousel>
     </>
   );
 }
