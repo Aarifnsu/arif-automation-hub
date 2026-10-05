@@ -103,7 +103,7 @@ export default function AboutPage() {
             className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
             style={{ color: "var(--text-secondary)" }}
           >
-            We are a global digital agency specializing in AI automation,
+            We are a global digital services team specializing in AI automation,
             Shopify development, web solutions, and brand design. Our mission is
             to help businesses automate, scale, and thrive in the digital
             economy.
@@ -169,7 +169,7 @@ export default function AboutPage() {
               className="text-base leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
-              To become the go-to digital agency for businesses seeking
+              To become the go-to digital services partner for businesses seeking
               AI-driven growth solutions. We envision a future where every
               business, regardless of size or location, can leverage the power
               of automation to compete on a global stage.

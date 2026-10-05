@@ -16,7 +16,7 @@ These terms apply to all visitors, users, and clients who access or use our webs
   },
   {
     title: "Services",
-    content: `Arif Automation Hub provides digital agency services including but not limited to:
+    content: `Arif Automation Hub provides digital services including but not limited to:
 
 - Shopify store development and customization
 - AI and business automation solutions

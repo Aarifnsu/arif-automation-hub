@@ -47,7 +47,7 @@ export default function HeroSection() {
                 animation: "pulse-glow 2s ease-in-out infinite",
               }}
             />
-            AI-Powered Digital Agency
+            AI-Powered Digital Services
           </div>
 
           <h1
