@@ -109,7 +109,7 @@ export default function JobFilter({ jobs, departments }: JobFilterProps) {
         </div>
       ) : (
         <div
-          className="text-center py-10 md:py-16 rounded-2xl"
+          className="text-center section rounded-2xl"
           style={{
             background: "var(--bg-card)",
             border: "1px solid var(--card-border)",

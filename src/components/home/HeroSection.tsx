@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden py-12 md:py-24 lg:py-28 px-4 md:min-h-[560px] flex items-center"
+      className="relative overflow-hidden section-hero px-4"
       style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
     >
       {/* Background effects */}
@@ -68,7 +68,7 @@ export default function HeroSection() {
             for businesses worldwide.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 section-head">
             <Link
               href="/contact"
               className="px-8 py-4 rounded-xl text-base font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 text-center"

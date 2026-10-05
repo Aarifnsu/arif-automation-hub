@@ -97,7 +97,7 @@ export default function PrivacyPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-12 md:py-20 px-4"
+        className="relative overflow-hidden section px-4"
         style={{ background: "var(--bg-primary)" }}
       >
         <div className="max-w-[1280px] mx-auto relative z-10">
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
       </section>
 
       {/* Content */}
-      <section className="py-12 md:py-18 px-4" style={{ background: "var(--bg-secondary)" }}>
+      <section className="section-sm px-4" style={{ background: "var(--bg-secondary)" }}>
         <div className="max-w-[800px] mx-auto">
           <div
             className="rounded-2xl p-6 md:p-10"

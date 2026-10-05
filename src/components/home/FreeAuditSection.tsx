@@ -39,7 +39,7 @@ export default function FreeAuditSection() {
 
   return (
     <section
-      className="relative py-12 md:py-20 px-4 overflow-hidden"
+      className="relative section px-4 overflow-hidden"
       style={{
         background: "var(--bg-primary)",
         transition: "background 0.4s",

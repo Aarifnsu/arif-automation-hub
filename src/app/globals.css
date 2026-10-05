@@ -167,6 +167,68 @@ body {
   border-radius: 3px;
 }
 
+/* ===== SECTION SPACING SCALE (single source of truth) =====
+   mobile 40px → tablet 56px → desktop 72px, every section, every page.
+   Hero gets a touch more room on top; the section right after a hero
+   halves its top padding so two paddings never stack into a big gap. */
+@layer components {
+  .section {
+    padding-block: 40px;
+  }
+  .section-sm {
+    padding-block: 28px;
+  }
+  .section-hero {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+  .section-hero + .section,
+  .section-hero + .section-sm {
+    padding-top: 20px;
+  }
+  .section-head {
+    margin-bottom: 32px;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-block: 56px;
+    }
+    .section-sm {
+      padding-block: 36px;
+    }
+    .section-hero {
+      padding-top: 64px;
+      padding-bottom: 56px;
+    }
+    .section-hero + .section,
+    .section-hero + .section-sm {
+      padding-top: 28px;
+    }
+    .section-head {
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section {
+      padding-block: 72px;
+    }
+    .section-sm {
+      padding-block: 44px;
+    }
+    .section-hero {
+      padding-top: 80px;
+      padding-bottom: 72px;
+    }
+    .section-hero + .section,
+    .section-hero + .section-sm {
+      padding-top: 36px;
+    }
+    .section-head {
+      margin-bottom: 48px;
+    }
+  }
+}
+
 /* ===== UTILITY CLASSES ===== */
 .gradient-text {
   background: var(--gradient-blue);

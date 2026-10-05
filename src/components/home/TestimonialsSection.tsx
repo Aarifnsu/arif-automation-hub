@@ -27,14 +27,14 @@ export default function TestimonialsSection() {
 
   return (
     <section
-      className="py-12 md:py-20 px-4"
+      className="section px-4"
       style={{
         background: "var(--bg-secondary)",
         transition: "background 0.4s",
       }}
     >
       {/* Section header */}
-      <div className="text-center max-w-[800px] mx-auto mb-8 md:mb-14">
+      <div className="text-center max-w-[800px] mx-auto section-head">
         <span
           className="inline-block text-[13px] uppercase tracking-[2px] font-semibold mb-3"
           style={{ color: "var(--neon-cyan)" }}

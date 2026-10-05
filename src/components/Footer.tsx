@@ -120,7 +120,7 @@ export default function Footer() {
         borderTop: "1px solid var(--card-border)",
       }}
     >
-      <div className="max-w-[1280px] mx-auto px-4 py-10 md:py-16">
+      <div className="max-w-[1280px] mx-auto px-4 section">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {/* Brand — always visible */}
           <div className="mb-2 md:mb-0">

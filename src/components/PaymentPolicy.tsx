@@ -69,7 +69,7 @@ export default function PaymentPolicy({
   return (
     <section
       id="payment-policy"
-      className="py-14 md:py-20 px-4"
+      className="section px-4"
       style={{
         background: "var(--bg-secondary)",
         transition: "background 0.4s",

@@ -24,7 +24,7 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-12 md:py-20 px-4"
+        className="relative overflow-hidden section px-4"
         style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
       >
         <div className="absolute inset-0 pointer-events-none">
@@ -65,7 +65,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section
-        className="py-12 md:py-20 px-4"
+        className="section px-4"
         style={{ background: "var(--bg-secondary)", transition: "background 0.4s" }}
       >
         <div className="max-w-[1280px] mx-auto">
@@ -135,7 +135,7 @@ export default function ServicesPage() {
 
       {/* Bottom CTA */}
       <section
-        className="py-12 md:py-20 px-4"
+        className="section px-4"
         style={{ background: "var(--bg-primary)", transition: "background 0.4s" }}
       >
         <div
