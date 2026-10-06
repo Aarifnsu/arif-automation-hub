@@ -46,8 +46,7 @@ export const teamMembers: TeamMember[] = [
     gradient: "linear-gradient(135deg, #7c3aed, #8b5cf6)",
     photo: "/images/team-arman-hossain.webp",
     socials: [
-      { platform: "Behance", url: "https://www.behance.net/armangrafix" },
-      { platform: "Dribbble", url: "https://dribbble.com/armangrafix" },
+      { platform: "GitHub", url: "#" },
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/armangrafix/" },
       { platform: "YouTube", url: "https://www.youtube.com/@ArmanGrafix0" },
     ],
