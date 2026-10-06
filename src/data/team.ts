@@ -20,8 +20,9 @@ export const teamMembers: TeamMember[] = [
     gradient: "linear-gradient(135deg, #2563eb, #06b6d4)",
     photo: "/images/arif-automation-hub-founder-portrait-transparent.webp",
     socials: [
-      { platform: "LinkedIn", url: "#" },
+      { platform: "YouTube", url: "https://www.youtube.com/@arif-nsu" },
       { platform: "GitHub", url: "#" },
+      { platform: "LinkedIn", url: "#" },
     ],
   },
   {
@@ -46,13 +47,10 @@ export const teamMembers: TeamMember[] = [
     gradient: "linear-gradient(135deg, #7c3aed, #8b5cf6)",
     photo: "/images/team-arman-hossain.webp",
     socials: [
-      { platform: "Facebook", url: "https://www.facebook.com/armangrafix0" },
-      { platform: "Instagram", url: "https://www.instagram.com/armangrafix0/" },
       { platform: "Behance", url: "https://www.behance.net/armangrafix" },
       { platform: "Dribbble", url: "https://dribbble.com/armangrafix" },
-      { platform: "X", url: "https://x.com/ArmanGrafix" },
-      { platform: "YouTube", url: "https://www.youtube.com/@ArmanGrafix0" },
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/armangrafix/" },
+      { platform: "YouTube", url: "https://www.youtube.com/@ArmanGrafix0" },
     ],
   },
 ];
