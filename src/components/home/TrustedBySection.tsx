@@ -103,7 +103,7 @@ function LogoItem({ entry }: { entry: LogoEntry }) {
           background: "var(--bg-card)",
           border: "1px solid var(--card-border)",
           boxShadow: "0 2px 10px var(--shadow-color)",
-          color: "var(--text-muted)",
+          color: "var(--electric-blue)",
         }}
       >
         {entry.icon}
