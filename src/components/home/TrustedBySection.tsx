@@ -159,8 +159,7 @@ export default function TrustedBySection() {
 
           {/* Scrolling track */}
           <div
-            className="flex items-center"
-            className="marquee-track"
+            className="flex items-center marquee-track"
           >
             {[...logos, ...logos].map((logo, i) => (
               <LogoItem key={`${logo.name}-${i}`} entry={logo} />
