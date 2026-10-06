@@ -32,6 +32,10 @@ export const teamMembers: TeamMember[] = [
     initials: "SH",
     gradient: "linear-gradient(135deg, #16a34a, #22c55e)",
     photo: "/images/team-sifat-hossain.webp",
+    socials: [
+      { platform: "GitHub", url: "https://github.com/devSifatAhmed" },
+      { platform: "YouTube", url: "https://www.youtube.com/@DevSifat" },
+    ],
   },
   {
     name: "Arman Hossain",
