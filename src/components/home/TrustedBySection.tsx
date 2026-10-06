@@ -160,7 +160,7 @@ export default function TrustedBySection() {
           {/* Scrolling track */}
           <div
             className="flex items-center"
-            style={{ animation: "marquee 30s linear infinite" }}
+            className="marquee-track"
           >
             {[...logos, ...logos].map((logo, i) => (
               <LogoItem key={`${logo.name}-${i}`} entry={logo} />
