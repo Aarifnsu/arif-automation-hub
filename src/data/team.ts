@@ -9,7 +9,6 @@ export interface TeamMember {
 }
 
 // Active team shown on the About page.
-// Team is intentionally kept to 3 members for now; more will be added later.
 export const teamMembers: TeamMember[] = [
   {
     name: "Arif",
@@ -51,6 +50,18 @@ export const teamMembers: TeamMember[] = [
       { platform: "Dribbble", url: "https://dribbble.com/armangrafix" },
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/armangrafix/" },
       { platform: "YouTube", url: "https://www.youtube.com/@ArmanGrafix0" },
+    ],
+  },
+  {
+    name: "Talimul Islam Utsha",
+    role: "AI Specialist",
+    shortBio:
+      "Data scientist skilled in ML/DL, neural networks, fine-tuning, and generative AI — building RAG systems and AI agents with LangChain & LangGraph.",
+    initials: "TU",
+    gradient: "linear-gradient(135deg, #e11d48, #f43f5e)",
+    photo: "/images/team-talimul-islam-utsha.webp",
+    socials: [
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/talimul-islam-utsha/" },
     ],
   },
 ];
