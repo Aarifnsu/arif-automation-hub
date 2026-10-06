@@ -246,7 +246,7 @@ body {
 }
 
 .marquee-track {
-  animation: marquee 18s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 @media (min-width: 768px) {
   .marquee-track {
