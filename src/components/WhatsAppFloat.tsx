@@ -7,8 +7,8 @@ export default function WhatsAppFloat() {
       aria-label="Chat on WhatsApp"
       className="fixed z-50 flex items-center justify-center transition-transform duration-300 hover:scale-110"
       style={{
-        bottom: "22px",
-        left: "22px",
+        bottom: "95px",
+        right: "18px",
         width: "56px",
         height: "56px",
         borderRadius: "50%",
