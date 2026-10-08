@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { serviceCards } from "@/data/services";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/arif.frelance@gmail.com";
+const FORM_ENDPOINT =
+  "https://formsubmit.co/ajax/15f404213a793c0c10041d40364f3c9f";
 
 const budgetRanges = [
   "Under $500",
@@ -220,6 +221,7 @@ export default function ContactForm() {
                   {s.title}
                 </option>
               ))}
+              <option value="Something else">Something else</option>
             </select>
           </div>
         </div>
