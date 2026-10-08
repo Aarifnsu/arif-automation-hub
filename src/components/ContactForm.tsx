@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { serviceCards } from "@/data/services";
 
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/arif.frelance@gmail.com";
+
 const budgetRanges = [
   "Under $500",
   "$500 - $1,000",
@@ -16,6 +18,8 @@ const budgetRanges = [
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -37,10 +41,43 @@ export default function ContactForm() {
     }
   }, [searchParams]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
-    setSubmitted(true);
+    if (sending) return;
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "-",
+          service: form.service || "-",
+          budget: form.budget || "-",
+          message: form.message,
+          source: "Arif Automation Hub website (arif-automation-hub.pages.dev/contact)",
+          _subject: `New inquiry — Arif Automation Hub — ${form.name}`,
+          _replyto: form.email,
+          _template: "table",
+          _captcha: "false",
+          _autoresponse:
+            "Thank you for reaching out to Arif Automation Hub! We have received your message and our team will contact you soon, usually within 24 hours.",
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || String(data.success) !== "true") {
+        throw new Error(data.message || "Request failed");
+      }
+      setSubmitted(true);
+    } catch {
+      setError(
+        "Sorry, your message could not be sent. Please try again or email us directly at arif.frelance@gmail.com."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (
@@ -237,16 +274,23 @@ export default function ContactForm() {
           />
         </div>
 
+        {error && (
+          <p role="alert" className="text-sm" style={{ color: "#f87171" }}>
+            {error}
+          </p>
+        )}
+
         <button
           type="submit"
-          className="w-full px-8 py-4 rounded-xl text-base font-semibold text-white cursor-pointer transition-all duration-300 hover:-translate-y-0.5"
+          disabled={sending}
+          className="w-full px-8 py-4 rounded-xl text-base font-semibold text-white cursor-pointer transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-wait"
           style={{
             background: "var(--gradient-blue)",
             boxShadow: "0 4px 20px var(--shadow-glow)",
             border: "none",
           }}
         >
-          Send Message →
+          {sending ? "Sending..." : "Send Message →"}
         </button>
       </form>
     </>
