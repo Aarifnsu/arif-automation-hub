@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import MobileStickyContact from "@/components/MobileStickyContact";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
           <ScrollToTop />
           <MobileStickyContact />
+          <WhatsAppFloat />
         </ThemeProvider>
       </body>
     </html>
