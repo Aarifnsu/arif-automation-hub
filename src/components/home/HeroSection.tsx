@@ -32,15 +32,13 @@ export default function HeroSection() {
         {/* Text */}
         <div>
           <div
-            className="flex items-center gap-3 rounded-full font-extrabold mb-6 text-4xl md:text-5xl lg:text-[56px]"
+            className="flex items-center gap-3 rounded-full font-extrabold mb-6 text-4xl md:text-5xl lg:text-[56px] whitespace-nowrap"
             style={{
               background: "rgba(37, 99, 235, 0.08)",
               border: "2px solid rgba(37, 99, 235, 0.25)",
               padding: "10px 28px",
               letterSpacing: "0.01em",
               lineHeight: "1.1",
-              display: "flex",
-              width: "fit-content",
             }}
           >
             <span
