@@ -14,7 +14,7 @@ export const teamMembers: TeamMember[] = [
     name: "Arif",
     role: "Founder",
     shortBio:
-      "Automation engineer and Shopify expert with a passion for building digital solutions that drive real business growth.",
+      "Automation engineer and Shopify expert driving real business growth.",
     initials: "A",
     gradient: "linear-gradient(135deg, #2563eb, #06b6d4)",
     photo: "/images/arif-automation-hub-founder-portrait-transparent.webp",
@@ -28,7 +28,7 @@ export const teamMembers: TeamMember[] = [
     name: "Sifat Hossain",
     role: "Co-founder",
     shortBio:
-      "Shopify Developer, App Developer & Full Stack Developer building fast, scalable stores and custom applications.",
+      "Full Stack & Shopify Developer building fast, scalable stores and apps.",
     initials: "SH",
     gradient: "linear-gradient(135deg, #16a34a, #22c55e)",
     photo: "/images/team-sifat-hossain.webp",
@@ -41,7 +41,7 @@ export const teamMembers: TeamMember[] = [
     name: "Arman Hossain",
     role: "Graphic & Motion Designer | Visual Artist | AI Specialist",
     shortBio:
-      "5+ years of experience crafting brand identities, motion graphics, and AI-assisted visual content.",
+      "5+ years crafting brand identities, motion graphics, and AI visual content.",
     initials: "AH",
     gradient: "linear-gradient(135deg, #7c3aed, #8b5cf6)",
     photo: "/images/team-arman-hossain.webp",
@@ -55,7 +55,7 @@ export const teamMembers: TeamMember[] = [
     name: "Talimul Islam Utsha",
     role: "AI Specialist",
     shortBio:
-      "Data scientist skilled in ML/DL, neural networks, fine-tuning, and generative AI — building RAG systems and AI agents with LangChain & LangGraph.",
+      "Data scientist building RAG systems and AI agents with LangChain & LangGraph.",
     initials: "TU",
     gradient: "linear-gradient(135deg, #e11d48, #f43f5e)",
     photo: "/images/team-talimul-islam-utsha.webp",
@@ -67,7 +67,7 @@ export const teamMembers: TeamMember[] = [
     name: "Dorjoy Das",
     role: "Full Stack Web Developer",
     shortBio:
-      "PHP & Laravel specialist building e-commerce systems, payment gateway integrations, and REST APIs. Founder of DurjoySoft.",
+      "PHP & Laravel specialist — e-commerce, payment gateways, and REST APIs.",
     initials: "DD",
     gradient: "linear-gradient(135deg, #0891b2, #0e7490)",
     photo: "/images/team-dorjoy-das.webp",
@@ -79,7 +79,7 @@ export const teamMembers: TeamMember[] = [
     name: "Ashikur Rahman Provat",
     role: "Web Developer & Cybersecurity Specialist",
     shortBio:
-      "Professional web application developer focused on simple, usable, and secure websites with emphasis on SEO and cybersecurity.",
+      "Web developer focused on secure, SEO-optimized applications and cybersecurity.",
     initials: "AP",
     gradient: "linear-gradient(135deg, #059669, #10b981)",
     photo: "/images/team-ashikur-provat.webp",
