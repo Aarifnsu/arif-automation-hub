@@ -98,7 +98,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2.5 no-underline md:ml-5 xl:ml-8 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2"
+            className="flex items-center gap-2.5 no-underline md:ml-10 xl:ml-16 max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2"
           >
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
