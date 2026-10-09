@@ -63,6 +63,30 @@ export const teamMembers: TeamMember[] = [
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/talimul-islam-utsha/" },
     ],
   },
+  {
+    name: "Dorjoy Das",
+    role: "Full Stack Web Developer",
+    shortBio:
+      "PHP & Laravel specialist building e-commerce systems, payment gateway integrations, and REST APIs. Founder of DurjoySoft.",
+    initials: "DD",
+    gradient: "linear-gradient(135deg, #0891b2, #0e7490)",
+    photo: "/images/team-dorjoy-das.webp",
+    socials: [
+      { platform: "GitHub", url: "https://github.com/durjoyd390" },
+    ],
+  },
+  {
+    name: "Ashikur Rahman Provat",
+    role: "Web Developer & Cybersecurity Specialist",
+    shortBio:
+      "Professional web application developer focused on simple, usable, and secure websites with emphasis on SEO and cybersecurity.",
+    initials: "AP",
+    gradient: "linear-gradient(135deg, #059669, #10b981)",
+    photo: "/images/team-ashikur-provat.webp",
+    socials: [
+      { platform: "GitHub", url: "https://github.com/DProvat" },
+    ],
+  },
 ];
 
 // Hidden for now — will be re-enabled as the team grows.
