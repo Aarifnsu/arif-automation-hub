@@ -114,7 +114,13 @@ export default function AboutPage() {
             style={{ color: "var(--text-primary)" }}
           >
             <span style={{ color: "var(--text-primary)" }}>About Arif</span>
-            <span className="gradient-text" style={{ display: "block" }}>AI Automation Hub</span>
+            <span style={{
+              display: "block",
+              background: "linear-gradient(to right, #06b6d4, #3b82f6, #2563eb)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}>AI Automation Hub</span>
           </h1>
           <p
             className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
