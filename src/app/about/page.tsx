@@ -110,17 +110,9 @@ export default function AboutPage() {
             Who We Are
           </span>
           <h1
-            className="font-display text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] mb-6"
-            style={{ color: "var(--text-primary)" }}
+            className="font-display text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] mb-6 gradient-text"
           >
-            <span style={{ color: "var(--text-primary)" }}>About Arif</span>
-            <span style={{
-              display: "block",
-              background: "linear-gradient(to right, #06b6d4, #3b82f6, #2563eb)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}>AI Automation Hub</span>
+            AI Automation Hub
           </h1>
           <p
             className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"

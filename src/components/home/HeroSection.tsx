@@ -32,13 +32,15 @@ export default function HeroSection() {
         {/* Text */}
         <div>
           <div
-            className="inline-flex items-center gap-3 rounded-full font-extrabold mb-6 text-4xl md:text-5xl lg:text-[56px]"
+            className="flex items-center gap-3 rounded-full font-extrabold mb-6 text-4xl md:text-5xl lg:text-[56px]"
             style={{
               background: "rgba(37, 99, 235, 0.08)",
               border: "2px solid rgba(37, 99, 235, 0.25)",
               padding: "10px 28px",
               letterSpacing: "0.01em",
               lineHeight: "1.1",
+              display: "flex",
+              width: "fit-content",
             }}
           >
             <span
@@ -48,7 +50,6 @@ export default function HeroSection() {
                 animation: "pulse-glow 2s ease-in-out infinite",
               }}
             />
-            <span style={{ color: "var(--text-primary)" }}>Arif </span>
             <span className="gradient-text">AI Automation Hub</span>
           </div>
 
