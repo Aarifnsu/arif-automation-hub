@@ -4,19 +4,19 @@ import PaymentPolicy from "@/components/PaymentPolicy";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Read the terms and conditions governing your use of Arif Automation Hub's services and website.",
+    "Read the terms and conditions governing your use of Arif AI Automation Hub's services and website.",
 };
 
 const sections = [
   {
     title: "Acceptance of Terms",
-    content: `By accessing or using the Arif Automation Hub website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+    content: `By accessing or using the Arif AI Automation Hub website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
 
 These terms apply to all visitors, users, and clients who access or use our website and services. We reserve the right to update or modify these terms at any time without prior notice. Your continued use of the services following any changes constitutes acceptance of those changes.`,
   },
   {
     title: "Services",
-    content: `Arif Automation Hub provides digital services including but not limited to:
+    content: `Arif AI Automation Hub provides digital services including but not limited to:
 
 - Shopify store development and customization
 - AI and business automation solutions
@@ -44,17 +44,17 @@ Important: this website does not process any payments. We never use third-party 
     title: "Intellectual Property",
     content: `Upon full payment, the client receives ownership of all custom work product created specifically for their project, including designs, code, and content, unless otherwise specified in the service agreement.
 
-Arif Automation Hub retains the right to:
+Arif AI Automation Hub retains the right to:
 
 - Use generic, non-client-specific code, components, and tools across projects
 - Showcase completed work in our portfolio (unless a non-disclosure agreement is in place)
 - Use third-party tools, libraries, and frameworks subject to their respective licenses
 
-All pre-existing intellectual property, proprietary tools, frameworks, and methodologies remain the property of Arif Automation Hub.`,
+All pre-existing intellectual property, proprietary tools, frameworks, and methodologies remain the property of Arif AI Automation Hub.`,
   },
   {
     title: "Limitation of Liability",
-    content: `To the maximum extent permitted by law, Arif Automation Hub shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from:
+    content: `To the maximum extent permitted by law, Arif AI Automation Hub shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from:
 
 - Your use or inability to use our services
 - Any errors, bugs, or interruptions in delivered work
@@ -66,7 +66,7 @@ Our total liability for any claim arising from our services shall not exceed the
   },
   {
     title: "Client Responsibilities",
-    content: `As a client of Arif Automation Hub, you agree to:
+    content: `As a client of Arif AI Automation Hub, you agree to:
 
 - Provide accurate and complete information required for your project
 - Provide timely feedback and approvals to avoid project delays
@@ -88,7 +88,7 @@ Upon termination:
 
 - The client shall pay for all work completed up to the date of termination
 - Any non-refundable deposits will not be returned
-- Arif Automation Hub will deliver all completed work product to the client
+- Arif AI Automation Hub will deliver all completed work product to the client
 - Any confidential information must be returned or destroyed by both parties`,
   },
   {
@@ -143,7 +143,7 @@ export default function TermsPage() {
               className="leading-relaxed mb-10"
               style={{ color: "var(--text-secondary)" }}
             >
-              Welcome to Arif Automation Hub. These Terms of Service govern your
+              Welcome to Arif AI Automation Hub. These Terms of Service govern your
               use of our website and services. Please read them carefully before
               engaging our services.
             </p>

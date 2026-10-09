@@ -6,7 +6,7 @@ import JobFilter from "@/components/JobFilter";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join Arif Automation Hub and build the future of AI-powered business solutions. Explore open roles in development, design, SEO, and automation.",
+    "Join Arif AI Automation Hub and build the future of AI-powered business solutions. Explore open roles in development, design, SEO, and automation.",
 };
 
 const benefits = [

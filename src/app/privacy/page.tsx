@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Learn how Arif Automation Hub collects, uses, and protects your personal information.",
+    "Learn how Arif AI Automation Hub collects, uses, and protects your personal information.",
 };
 
 const sections = [
@@ -127,7 +127,7 @@ export default function PrivacyPage() {
               className="leading-relaxed mb-10"
               style={{ color: "var(--text-secondary)" }}
             >
-              At Arif Automation Hub, we are committed to protecting your
+              At Arif AI Automation Hub, we are committed to protecting your
               privacy and ensuring the security of your personal information.
               This Privacy Policy outlines how we collect, use, disclose, and
               safeguard your information when you visit our website or use our

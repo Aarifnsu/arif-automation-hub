@@ -4,7 +4,7 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights, guides, and updates on AI automation, Shopify development, SEO, and digital growth strategies from Arif Automation Hub.",
+    "Insights, guides, and updates on AI automation, Shopify development, SEO, and digital growth strategies from Arif AI Automation Hub.",
 };
 
 const topics = [

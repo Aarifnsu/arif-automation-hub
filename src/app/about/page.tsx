@@ -7,7 +7,7 @@ import { marketplaces } from "@/data/marketplaces";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Arif Automation Hub — our mission, team, and values driving AI-powered business solutions worldwide.",
+    "Learn about Arif AI Automation Hub — our mission, team, and values driving AI-powered business solutions worldwide.",
 };
 
 const stats = [
@@ -113,7 +113,7 @@ export default function AboutPage() {
             className="font-display text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.1] mb-6"
             style={{ color: "var(--text-primary)" }}
           >
-            About <span className="gradient-text">Arif Automation Hub</span>
+            About <span className="gradient-text">Arif AI Automation Hub</span>
           </h1>
           <p
             className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"

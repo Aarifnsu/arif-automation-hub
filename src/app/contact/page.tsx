@@ -6,7 +6,7 @@ import PaymentPolicy from "@/components/PaymentPolicy";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Arif Automation Hub. Let's discuss your project and how we can help your business grow with AI-powered solutions.",
+    "Get in touch with Arif AI Automation Hub. Let's discuss your project and how we can help your business grow with AI-powered solutions.",
 };
 
 export default function ContactPage() {

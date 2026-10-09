@@ -6,7 +6,7 @@ function BarItems({ hidden = false }: { hidden?: boolean }) {
   return (
     <span aria-hidden={hidden} className="flex items-center shrink-0 pr-24">
       <span className="font-semibold text-white text-sm">
-        Welcome to AI Automation Hub
+        Welcome to Arif AI Automation Hub
       </span>
       <span className="font-medium text-white text-sm ml-24">
         AI-Powered Digital Services · Automate · Grow · Scale

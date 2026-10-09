@@ -58,13 +58,13 @@ export default function ContactForm() {
           service: form.service || "-",
           budget: form.budget || "-",
           message: form.message,
-          source: "Arif Automation Hub website (arif-automation-hub.pages.dev/contact)",
-          _subject: `New inquiry — Arif Automation Hub — ${form.name}`,
+          source: "Arif AI Automation Hub website (arif-automation-hub.pages.dev/contact)",
+          _subject: `New inquiry — Arif AI Automation Hub — ${form.name}`,
           _replyto: form.email,
           _template: "table",
           _captcha: "false",
           _autoresponse:
-            "Thank you for reaching out to Arif Automation Hub! We have received your message and our team will contact you soon, usually within 24 hours.",
+            "Thank you for reaching out to Arif AI Automation Hub! We have received your message and our team will contact you soon, usually within 24 hours.",
         }),
       });
       const data = await res.json().catch(() => ({}));
