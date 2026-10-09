@@ -73,6 +73,40 @@ export const serviceCategories: ServiceCategory[] = [
       { label: "App Maintenance", href: "/services/app-development" },
     ],
   },
+  {
+    title: "Backend & API Development",
+    gradient: "linear-gradient(135deg, #0891b2, #0e7490)",
+    links: [
+      { label: "PHP & Laravel Development", href: "/services/backend-api" },
+      { label: "REST API Development", href: "/services/backend-api" },
+      { label: "Payment Gateway Integration", href: "/services/backend-api" },
+      { label: "Server Setup & Management", href: "/services/backend-api" },
+      { label: "Database Architecture", href: "/services/backend-api" },
+    ],
+  },
+  {
+    title: "MERN Stack Development",
+    gradient: "linear-gradient(135deg, #059669, #10b981)",
+    links: [
+      { label: "React.js Development", href: "/services/mern-stack" },
+      { label: "Node.js & Express APIs", href: "/services/mern-stack" },
+      { label: "Next.js Web Apps", href: "/services/mern-stack" },
+      { label: "MongoDB Integration", href: "/services/mern-stack" },
+      { label: "Full Stack Solutions", href: "/services/mern-stack" },
+    ],
+  },
+  {
+    title: "AI & Machine Learning",
+    gradient: "linear-gradient(135deg, #e11d48, #f43f5e)",
+    badge: "New",
+    links: [
+      { label: "Custom AI Model Training", href: "/services/ai-ml" },
+      { label: "RAG System Development", href: "/services/ai-ml" },
+      { label: "AI Agent Development", href: "/services/ai-ml" },
+      { label: "LangChain & LangGraph", href: "/services/ai-ml" },
+      { label: "Generative AI Integration", href: "/services/ai-ml" },
+    ],
+  },
 ];
 
 export interface ServiceCard {
@@ -163,6 +197,46 @@ export const serviceCards: ServiceCard[] = [
       "App UI/UX Design",
     ],
     href: "/services/app-development",
+  },
+  {
+    icon: "⚙️",
+    title: "Backend & API Development",
+    description:
+      "Robust server-side solutions with PHP, Laravel, and REST APIs — secure, scalable, and production-ready.",
+    features: [
+      "PHP & Laravel Development",
+      "REST API Development",
+      "Payment Gateway Integration",
+      "Server Setup & Management",
+    ],
+    href: "/services/backend-api",
+  },
+  {
+    icon: "🟢",
+    title: "MERN Stack Development",
+    description:
+      "Full stack JavaScript solutions using React, Node.js, Express, and Next.js for modern web applications.",
+    features: [
+      "React.js Development",
+      "Node.js & Express APIs",
+      "Next.js Web Apps",
+      "Full Stack Solutions",
+    ],
+    href: "/services/mern-stack",
+  },
+  {
+    icon: "🧠",
+    title: "AI & Machine Learning",
+    description:
+      "Custom AI models, RAG systems, and intelligent agents built with LangChain, LangGraph, and generative AI.",
+    features: [
+      "Custom AI Model Training",
+      "RAG System Development",
+      "AI Agent Development",
+      "Generative AI Integration",
+    ],
+    href: "/services/ai-ml",
+    badge: "New",
   },
 ];
 

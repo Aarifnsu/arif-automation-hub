@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
@@ -6,6 +7,20 @@ export const metadata: Metadata = {
   description:
     "Insights, guides, and updates on AI automation, Shopify development, SEO, and digital growth strategies from Arif AI Automation Hub.",
 };
+
+const blogPosts = [
+  {
+    slug: "how-ai-automation-is-transforming-shopify-stores-in-2025",
+    title: "How AI Automation Is Transforming Shopify Stores in 2025",
+    excerpt:
+      "Discover how AI-powered tools like custom chatbots, automated workflows, and smart product recommendations are helping Shopify store owners boost revenue and save hours every week.",
+    category: "AI Automation",
+    categoryColor: "#2563eb",
+    date: "October 10, 2026",
+    readTime: "5 min read",
+    gradient: "linear-gradient(135deg, #2563eb, #06b6d4)",
+  },
+];
 
 const topics = [
   "AI Automation",
@@ -50,6 +65,71 @@ export default function BlogPage() {
             Insights, guides, and updates on AI automation, Shopify development,
             SEO, and digital growth strategies.
           </p>
+        </div>
+      </section>
+
+      {/* Blog Posts */}
+      <section className="section px-4" style={{ background: "var(--bg-secondary)" }}>
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {blogPosts.map((post) => (
+              <div
+                key={post.slug}
+                className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  background: "var(--bg-card)",
+                  border: "1px solid var(--card-border)",
+                  boxShadow: "0 4px 20px var(--shadow-color)",
+                }}
+              >
+                {/* Gradient banner */}
+                <div
+                  className="h-3 w-full"
+                  style={{ background: post.gradient }}
+                />
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span
+                      className="text-xs font-semibold px-3 py-1 rounded-full"
+                      style={{
+                        background: `${post.categoryColor}18`,
+                        color: post.categoryColor,
+                      }}
+                    >
+                      {post.category}
+                    </span>
+                    <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                      {post.readTime}
+                    </span>
+                  </div>
+                  <h2
+                    className="font-display text-lg font-bold leading-snug mb-3"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {post.title}
+                  </h2>
+                  <p
+                    className="text-sm leading-relaxed mb-4"
+                    style={{ color: "var(--text-secondary)" }}
+                  >
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                      {post.date}
+                    </span>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-sm font-semibold no-underline transition-colors duration-200"
+                      style={{ color: "var(--electric-blue)" }}
+                    >
+                      Read more →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
