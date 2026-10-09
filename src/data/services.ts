@@ -19,6 +19,9 @@ export const serviceCategories: ServiceCategory[] = [
       { label: "Product Recharge", href: "/services/shopify" },
       { label: "Custom Section", href: "/services/shopify" },
       { label: "Amazon Product App Connection", href: "/services/shopify" },
+      { label: "Conversion Rate Optimization", href: "/services/shopify" },
+      { label: "A/B Testing & Analytics", href: "/services/shopify" },
+      { label: "Funnel Optimization", href: "/services/shopify" },
     ],
   },
   {
