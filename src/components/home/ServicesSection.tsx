@@ -60,6 +60,15 @@ export default function ServicesSection() {
               border: "1px solid var(--card-border)",
             }}
           >
+            {card.badge && (
+              <span
+                className="absolute top-4 right-4 z-10 text-[11px] font-semibold px-2.5 py-1 rounded-full"
+                style={{ background: "rgba(37, 99, 235, 0.12)", color: "var(--electric-blue)", border: "1px solid rgba(37, 99, 235, 0.3)" }}
+              >
+                {card.badge}
+              </span>
+            )}
+
             {/* Top accent line */}
             <div
               className="absolute top-0 left-0 right-0 h-[3px] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400"

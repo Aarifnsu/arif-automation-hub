@@ -2,6 +2,38 @@
 
 import Link from "next/link";
 
+const message =
+  "👋 Welcome to Arif AI Automation Hub · AI-Powered Digital Services · Automate · Grow · Scale";
+
+function BarItems({ hidden = false }: { hidden?: boolean }) {
+  return (
+    <span
+      aria-hidden={hidden}
+      className="flex items-center gap-6 shrink-0 pr-12"
+    >
+      <span className="font-medium text-white text-sm">{message}</span>
+      <Link
+        href="/contact"
+        className="px-4 py-1 rounded-full text-xs font-semibold text-white no-underline shrink-0"
+        style={{
+          background: "var(--bar-btn-bg)",
+          border: "1px solid var(--bar-btn-border)",
+          backdropFilter: "blur(4px)",
+        }}
+      >
+        Contact Us
+      </Link>
+      <Link
+        href="/free-audit"
+        className="px-4 py-1 rounded-full text-xs font-semibold no-underline shrink-0"
+        style={{ background: "#ffffff", color: "#0c1929" }}
+      >
+        Free Audit →
+      </Link>
+    </span>
+  );
+}
+
 export default function AnnouncementBar() {
   return (
     <div
@@ -10,83 +42,17 @@ export default function AnnouncementBar() {
         background: "linear-gradient(90deg, #2563eb, #06b6d4, #2563eb)",
         backgroundSize: "200% 100%",
         animation: "shimmer 3s ease infinite",
-        padding: "10px 16px",
+        padding: "10px 0",
       }}
     >
-      {/* Desktop — static centered */}
-      <div className="hidden md:flex items-center justify-center gap-4">
-        <p className="font-medium text-white text-sm">
-          🚀 Transform Your Business with AI-Powered Solutions
-        </p>
-        <Link
-          href="/contact"
-          className="px-4 py-1 rounded-full text-xs font-semibold text-white no-underline transition-all duration-300 hover:bg-white/30"
-          style={{
-            background: "var(--bar-btn-bg)",
-            border: "1px solid var(--bar-btn-border)",
-            backdropFilter: "blur(4px)",
-          }}
-        >
-          Contact Us
-        </Link>
-      </div>
-
-      {/* Mobile — scrolling marquee */}
-      <div className="md:hidden flex whitespace-nowrap overflow-hidden">
+      {/* Scrolling marquee — all screen sizes. Content is duplicated for a seamless loop. */}
+      <div className="flex whitespace-nowrap overflow-hidden">
         <div
-          className="flex items-center gap-6 animate-marquee"
-          style={{ animation: "marquee 18s linear infinite" }}
+          className="flex items-center"
+          style={{ animation: "marquee 28s linear infinite" }}
         >
-          <span className="font-medium text-white text-sm">
-            🚀 Transform Your Business with AI-Powered Solutions
-          </span>
-          <Link
-            href="/contact"
-            className="px-4 py-1 rounded-full text-xs font-semibold text-white no-underline shrink-0"
-            style={{
-              background: "var(--bar-btn-bg)",
-              border: "1px solid var(--bar-btn-border)",
-              backdropFilter: "blur(4px)",
-            }}
-          >
-            Contact Us
-          </Link>
-          <Link
-            href="/free-audit"
-            className="px-4 py-1 rounded-full text-xs font-semibold no-underline shrink-0"
-            style={{
-              background: "#ffffff",
-              color: "#0c1929",
-            }}
-          >
-            Free Audit →
-          </Link>
-
-          {/* Duplicate for seamless loop */}
-          <span className="font-medium text-white text-sm">
-            🚀 Transform Your Business with AI-Powered Solutions
-          </span>
-          <Link
-            href="/contact"
-            className="px-4 py-1 rounded-full text-xs font-semibold text-white no-underline shrink-0"
-            style={{
-              background: "var(--bar-btn-bg)",
-              border: "1px solid var(--bar-btn-border)",
-              backdropFilter: "blur(4px)",
-            }}
-          >
-            Contact Us
-          </Link>
-          <Link
-            href="/free-audit"
-            className="px-4 py-1 rounded-full text-xs font-semibold no-underline shrink-0"
-            style={{
-              background: "#ffffff",
-              color: "#0c1929",
-            }}
-          >
-            Free Audit →
-          </Link>
+          <BarItems />
+          <BarItems hidden />
         </div>
       </div>
     </div>

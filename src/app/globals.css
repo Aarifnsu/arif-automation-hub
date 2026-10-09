@@ -28,6 +28,8 @@
   --logo-glow: 0 0 16px rgba(37, 99, 235, 0.5), 0 0 32px rgba(6, 182, 212, 0.25);
   --logo-bg: rgba(255, 255, 255, 0.08);
   --nav-pill-active-bg: #16305a;
+  --menu-bg: #132742;
+  --overlay-dim: rgba(2, 8, 18, 0.55);
 }
 
 :root[data-theme="light"] {
@@ -58,6 +60,8 @@
   --logo-glow: 0 2px 12px rgba(37, 99, 235, 0.25), 0 0 24px rgba(6, 182, 212, 0.14);
   --logo-bg: rgba(255, 255, 255, 0.35);
   --nav-pill-active-bg: rgba(255, 255, 255, 0.85);
+  --menu-bg: #ffffff;
+  --overlay-dim: rgba(12, 25, 41, 0.28);
 }
 
 @theme inline {

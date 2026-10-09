@@ -23,8 +23,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "Arif Automation Hub | AI-Powered Business Solutions",
-    template: "%s | Arif Automation Hub",
+    default: "Arif AI Automation Hub | AI-Powered Business Solutions",
+    template: "%s | Arif AI Automation Hub",
   },
   description:
     "Transform your business with AI automation, Shopify solutions, web development, SEO, and branding services. Expert team delivering results worldwide.",

@@ -127,7 +127,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5 mb-4">
               <Image
                 src="/images/arif-automation-hub-icon-transparent.webp"
-                alt="Arif Automation Hub"
+                alt="Arif AI Automation Hub"
                 width={40}
                 height={40}
                 className="rounded-[10px]"
@@ -136,7 +136,7 @@ export default function Footer() {
                 className="font-display font-bold text-xl"
                 style={{ color: "var(--text-primary)" }}
               >
-                Arif<span className="gradient-text">Automation</span>
+                Arif <span className="gradient-text">AI Automation Hub</span>
               </span>
             </div>
             <p
@@ -256,7 +256,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--card-border)" }}
         >
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            © {new Date().getFullYear()} Arif Automation Hub. All rights
+            © {new Date().getFullYear()} Arif AI Automation Hub. All rights
             reserved.
           </p>
           <div className="flex gap-6">

@@ -45,6 +45,14 @@ export default function Navbar() {
 
   return (
     <>
+      <div
+        aria-hidden
+        className="fixed inset-0 z-[98] max-md:hidden pointer-events-none transition-opacity duration-300"
+        style={{
+          background: "var(--overlay-dim)",
+          opacity: megaOpen ? 1 : 0,
+        }}
+      />
       <nav
         className="sticky top-0 z-[99] transition-all duration-400"
         style={{
@@ -94,7 +102,7 @@ export default function Navbar() {
           >
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
-              alt="Arif Automation Hub"
+              alt="Arif AI Automation Hub"
               width={80}
               height={80}
               className="rounded-[14px] w-[60px] h-[60px] md:w-[64px] md:h-[64px] xl:w-[80px] xl:h-[80px]"
@@ -103,6 +111,12 @@ export default function Navbar() {
                 background: "var(--logo-bg)",
               }}
             />
+            <span
+              className="hidden xl:inline font-display font-bold text-[15px] whitespace-nowrap"
+              style={{ color: "var(--text-primary)" }}
+            >
+              Arif <span className="gradient-text">AI Automation Hub</span>
+            </span>
           </Link>
 
           {/* Desktop menu */}
@@ -193,11 +207,11 @@ export default function Navbar() {
                   ref={megaPanelRef}
                   onMouseEnter={handleMegaEnter}
                   onMouseLeave={handleMegaLeave}
-                  className="absolute top-full left-1/2 rounded-2xl shadow-xl transition-all duration-300 overflow-hidden max-md:hidden"
+                  className="absolute top-full left-1/2 rounded-2xl shadow-2xl transition-all duration-300 overflow-hidden max-md:hidden"
                   style={{
                     width: "min(780px, calc(100vw - 2rem))",
                     padding: megaOpen ? "20px" : "0",
-                    background: "var(--bg-card)",
+                    background: "var(--menu-bg)",
                     border: megaOpen
                       ? "1px solid var(--card-border)"
                       : "none",
@@ -217,7 +231,7 @@ export default function Navbar() {
                     {serviceCategories.map((cat, i) => (
                       <div key={i}>
                         <h4
-                          className="text-white text-xs font-bold rounded-lg uppercase tracking-wider"
+                          className="text-white text-xs font-bold rounded-lg uppercase tracking-wider flex items-center justify-between gap-2"
                           style={{
                             background: cat.gradient,
                             padding: "7px 14px",
@@ -225,6 +239,14 @@ export default function Navbar() {
                           }}
                         >
                           {cat.title}
+                          {cat.badge && (
+                            <span
+                              className="rounded-full normal-case tracking-normal text-[10px] font-semibold px-2 py-0.5"
+                              style={{ background: "rgba(255,255,255,0.22)" }}
+                            >
+                              {cat.badge}
+                            </span>
+                          )}
                         </h4>
                         <div className="flex flex-col">
                           {cat.links.map((subLink, j) => (
@@ -332,7 +354,7 @@ export default function Navbar() {
           >
             <Image
               src="/images/arif-automation-hub-icon-transparent.webp"
-              alt="Arif Automation Hub"
+              alt="Arif AI Automation Hub"
               width={64}
               height={64}
               className="rounded-[14px]"
@@ -378,7 +400,7 @@ export default function Navbar() {
                       {serviceCategories.map((cat, i) => (
                         <div key={i} className="mb-2">
                           <h4
-                            className="text-white text-[11px] font-bold rounded-md uppercase tracking-wider"
+                            className="text-white text-[11px] font-bold rounded-md uppercase tracking-wider flex items-center justify-between gap-2"
                             style={{
                               background: cat.gradient,
                               padding: "5px 10px",
@@ -386,6 +408,14 @@ export default function Navbar() {
                             }}
                           >
                             {cat.title}
+                            {cat.badge && (
+                              <span
+                                className="rounded-full normal-case tracking-normal text-[9px] font-semibold px-1.5 py-0.5"
+                                style={{ background: "rgba(255,255,255,0.22)" }}
+                              >
+                                {cat.badge}
+                              </span>
+                            )}
                           </h4>
                           {cat.links.map((subLink, j) => (
                             <Link

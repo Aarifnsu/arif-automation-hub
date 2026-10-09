@@ -1,6 +1,7 @@
 export interface ServiceCategory {
   title: string;
   gradient: string;
+  badge?: string;
   links: { label: string; href: string }[];
 }
 
@@ -19,6 +20,7 @@ export const serviceCategories: ServiceCategory[] = [
   {
     title: "AI & Business Automation",
     gradient: "linear-gradient(135deg, #2563eb, #3b82f6)",
+    badge: "Upcoming",
     links: [
       { label: "GoHighLevel Setup", href: "/services/ai-automation" },
       { label: "Custom AI Agents", href: "/services/ai-automation" },
@@ -79,6 +81,7 @@ export interface ServiceCard {
   description: string;
   features: string[];
   href: string;
+  badge?: string;
 }
 
 export const serviceCards: ServiceCard[] = [
@@ -107,6 +110,7 @@ export const serviceCards: ServiceCard[] = [
       "Workflow Optimization",
     ],
     href: "/services/ai-automation",
+    badge: "Upcoming · Future Trend",
   },
   {
     icon: "💻",
