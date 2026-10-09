@@ -190,3 +190,8 @@ export const navLinks = [
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
+
+export const socialLinks = [
+  { label: "Facebook", href: "https://www.facebook.com/Arifautomationhub", icon: "facebook" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/arif-nsu", icon: "linkedin" },
+];
