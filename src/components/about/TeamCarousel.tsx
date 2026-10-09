@@ -51,7 +51,7 @@ export default function TeamCarousel() {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % total);
-    }, 5000);
+    }, 3000);
   };
 
   useEffect(() => {
@@ -66,11 +66,56 @@ export default function TeamCarousel() {
     startTimer();
   };
 
+  const prev = () => {
+    setCurrent((c) => (c - 1 + total) % total);
+    startTimer();
+  };
+
+  const next = () => {
+    setCurrent((c) => (c + 1) % total);
+    startTimer();
+  };
+
   const member = teamMembers[current];
 
   return (
     <div className="w-full max-w-sm mx-auto">
-      {/* Card */}
+      {/* Card with arrows */}
+      <div className="relative">
+        {/* Left arrow */}
+        <button
+          onClick={prev}
+          className="absolute left-[-20px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+          style={{
+            background: "var(--bg-card)",
+            border: "1px solid var(--card-border)",
+            color: "var(--text-primary)",
+            boxShadow: "0 4px 12px var(--shadow-color)",
+          fontSize: "22px",
+          lineHeight: "1",
+          }}
+          aria-label="Previous"
+        >
+          ‹
+        </button>
+
+        {/* Right arrow */}
+        <button
+          onClick={next}
+          className="absolute right-[-20px] top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+          style={{
+            background: "var(--bg-card)",
+            border: "1px solid var(--card-border)",
+            color: "var(--text-primary)",
+            boxShadow: "0 4px 12px var(--shadow-color)",
+            fontSize: "22px",
+            lineHeight: "1",
+          }}
+          aria-label="Next"
+        >
+          ›
+        </button>
+
       <div
         className="rounded-2xl p-8 text-center transition-all duration-500"
         style={{
@@ -150,6 +195,7 @@ export default function TeamCarousel() {
           </div>
         )}
       </div>
+      </div>{/* end relative wrapper */}
 
       {/* Dots */}
       <div className="flex justify-center gap-2 mt-5">
@@ -181,7 +227,7 @@ export default function TeamCarousel() {
           className="h-full rounded-full"
           style={{
             background: "var(--electric-blue)",
-            animation: "progress-bar 5s linear forwards",
+            animation: "progress-bar 3s linear forwards",
           }}
         />
       </div>
