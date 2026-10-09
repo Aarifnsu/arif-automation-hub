@@ -15,6 +15,10 @@ export const serviceCategories: ServiceCategory[] = [
       { label: "App Integration", href: "/services/shopify" },
       { label: "Migration & Setup", href: "/services/shopify" },
       { label: "Performance Optimization", href: "/services/shopify" },
+      { label: "Virtual Assistant", href: "/services/shopify" },
+      { label: "Product Recharge", href: "/services/shopify" },
+      { label: "Custom Section", href: "/services/shopify" },
+      { label: "Amazon Product App Connection", href: "/services/shopify" },
     ],
   },
   {
