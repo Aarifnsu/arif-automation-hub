@@ -111,12 +111,6 @@ export default function Navbar() {
                 background: "var(--logo-bg)",
               }}
             />
-            <span
-              className="hidden xl:inline font-display font-bold text-[15px] whitespace-nowrap"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Arif <span className="gradient-text">AI Automation Hub</span>
-            </span>
           </Link>
 
           {/* Desktop menu */}
@@ -341,7 +335,7 @@ export default function Navbar() {
         className="fixed top-0 left-0 h-full z-[98] transition-transform duration-300 overflow-y-auto md:hidden"
         style={{
           width: "280px",
-          background: "var(--bg-card)",
+          background: "var(--menu-bg)",
           borderRight: "1px solid var(--card-border)",
           transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
         }}

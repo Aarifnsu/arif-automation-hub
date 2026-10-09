@@ -2,19 +2,18 @@
 
 import Link from "next/link";
 
-const message =
-  "👋 Welcome to Arif AI Automation Hub · AI-Powered Digital Services · Automate · Grow · Scale";
-
 function BarItems({ hidden = false }: { hidden?: boolean }) {
   return (
-    <span
-      aria-hidden={hidden}
-      className="flex items-center gap-6 shrink-0 pr-12"
-    >
-      <span className="font-medium text-white text-sm">{message}</span>
+    <span aria-hidden={hidden} className="flex items-center shrink-0 pr-24">
+      <span className="font-semibold text-white text-sm">
+        Welcome to AI Automation Hub
+      </span>
+      <span className="font-medium text-white text-sm ml-24">
+        AI-Powered Digital Services · Automate · Grow · Scale
+      </span>
       <Link
         href="/contact"
-        className="px-4 py-1 rounded-full text-xs font-semibold text-white no-underline shrink-0"
+        className="ml-24 px-4 py-1 rounded-full text-xs font-semibold text-white no-underline shrink-0"
         style={{
           background: "var(--bar-btn-bg)",
           border: "1px solid var(--bar-btn-border)",
@@ -25,8 +24,11 @@ function BarItems({ hidden = false }: { hidden?: boolean }) {
       </Link>
       <Link
         href="/free-audit"
-        className="px-4 py-1 rounded-full text-xs font-semibold no-underline shrink-0"
-        style={{ background: "#ffffff", color: "#0c1929" }}
+        className="ml-6 px-4 py-1 rounded-full text-xs font-semibold no-underline shrink-0"
+        style={{
+          background: "linear-gradient(135deg, #dbeafe, #cffafe)",
+          color: "#0c1929",
+        }}
       >
         Free Audit →
       </Link>
@@ -45,11 +47,11 @@ export default function AnnouncementBar() {
         padding: "10px 0",
       }}
     >
-      {/* Scrolling marquee — all screen sizes. Content is duplicated for a seamless loop. */}
+      {/* Scrolling marquee — all screen sizes. Content duplicated for a seamless loop. */}
       <div className="flex whitespace-nowrap overflow-hidden">
         <div
           className="flex items-center"
-          style={{ animation: "marquee 28s linear infinite" }}
+          style={{ animation: "marquee 30s linear infinite" }}
         >
           <BarItems />
           <BarItems hidden />
