@@ -65,9 +65,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Dorjoy Das",
-    role: "Full Stack Web Developer",
+    role: "PHP & Laravel Expert | API & Server Specialist",
     shortBio:
-      "PHP & Laravel specialist — e-commerce, payment gateways, and REST APIs.",
+      "Backend specialist building scalable APIs, server infrastructure, and e-commerce systems with PHP & Laravel.",
     initials: "DD",
     gradient: "linear-gradient(135deg, #0891b2, #0e7490)",
     photo: "/images/team-dorjoy-das.webp",
@@ -77,9 +77,9 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Ashikur Rahman Provat",
-    role: "Web Developer & Cybersecurity Specialist",
+    role: "MERN Stack & JavaScript Developer",
     shortBio:
-      "Web developer focused on secure, SEO-optimized applications and cybersecurity.",
+      "Full stack developer specializing in React, Node.js, Express, and Next.js — building fast, modern web applications.",
     initials: "AP",
     gradient: "linear-gradient(135deg, #059669, #10b981)",
     photo: "/images/team-ashikur-provat.webp",

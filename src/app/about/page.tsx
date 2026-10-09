@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { teamMembers } from "@/data/team";
 import { marketplaces } from "@/data/marketplaces";
+import TeamCarousel from "@/components/about/TeamCarousel";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -257,7 +258,13 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1120px] mx-auto">
+          {/* Mobile: auto-scroll carousel */}
+          <div className="block lg:hidden">
+            <TeamCarousel />
+          </div>
+
+          {/* Desktop: 3-col grid */}
+          <div className="hidden lg:grid grid-cols-3 gap-8 max-w-[1120px] mx-auto">
             {teamMembers.map((member) => (
               <div
                 key={member.name}
