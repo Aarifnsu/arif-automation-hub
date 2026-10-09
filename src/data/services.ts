@@ -27,6 +27,10 @@ export const serviceCategories: ServiceCategory[] = [
       { label: "CRM Automation", href: "/services/ai-automation" },
       { label: "Workflow Automation", href: "/services/ai-automation" },
       { label: "Chatbot Development", href: "/services/ai-automation" },
+      { label: "Custom AI Model Training", href: "/services/ai-automation" },
+      { label: "RAG System Development", href: "/services/ai-automation" },
+      { label: "LangChain & LangGraph", href: "/services/ai-automation" },
+      { label: "Generative AI Integration", href: "/services/ai-automation" },
     ],
   },
   {
@@ -36,8 +40,12 @@ export const serviceCategories: ServiceCategory[] = [
       { label: "WordPress Development", href: "/services/web-development" },
       { label: "Custom CMS Solutions", href: "/services/web-development" },
       { label: "Landing Pages", href: "/services/web-development" },
-      { label: "Web Application Dev", href: "/services/web-development" },
-      { label: "API Development", href: "/services/web-development" },
+      { label: "React.js / Next.js Apps", href: "/services/web-development" },
+      { label: "Node.js & Express APIs", href: "/services/web-development" },
+      { label: "PHP & Laravel Development", href: "/services/web-development" },
+      { label: "REST API Development", href: "/services/web-development" },
+      { label: "Payment Gateway Integration", href: "/services/web-development" },
+      { label: "Full Stack Solutions", href: "/services/web-development" },
     ],
   },
   {
@@ -73,40 +81,6 @@ export const serviceCategories: ServiceCategory[] = [
       { label: "App Maintenance", href: "/services/app-development" },
     ],
   },
-  {
-    title: "Backend & API Development",
-    gradient: "linear-gradient(135deg, #0891b2, #0e7490)",
-    links: [
-      { label: "PHP & Laravel Development", href: "/services/backend-api" },
-      { label: "REST API Development", href: "/services/backend-api" },
-      { label: "Payment Gateway Integration", href: "/services/backend-api" },
-      { label: "Server Setup & Management", href: "/services/backend-api" },
-      { label: "Database Architecture", href: "/services/backend-api" },
-    ],
-  },
-  {
-    title: "MERN Stack Development",
-    gradient: "linear-gradient(135deg, #059669, #10b981)",
-    links: [
-      { label: "React.js Development", href: "/services/mern-stack" },
-      { label: "Node.js & Express APIs", href: "/services/mern-stack" },
-      { label: "Next.js Web Apps", href: "/services/mern-stack" },
-      { label: "MongoDB Integration", href: "/services/mern-stack" },
-      { label: "Full Stack Solutions", href: "/services/mern-stack" },
-    ],
-  },
-  {
-    title: "AI & Machine Learning",
-    gradient: "linear-gradient(135deg, #e11d48, #f43f5e)",
-    badge: "New",
-    links: [
-      { label: "Custom AI Model Training", href: "/services/ai-ml" },
-      { label: "RAG System Development", href: "/services/ai-ml" },
-      { label: "AI Agent Development", href: "/services/ai-ml" },
-      { label: "LangChain & LangGraph", href: "/services/ai-ml" },
-      { label: "Generative AI Integration", href: "/services/ai-ml" },
-    ],
-  },
 ];
 
 export interface ServiceCard {
@@ -136,12 +110,12 @@ export const serviceCards: ServiceCard[] = [
     icon: "🤖",
     title: "AI & Business Automation",
     description:
-      "Streamline operations with intelligent automation, custom AI agents, and CRM systems that work 24/7.",
+      "Streamline operations with intelligent automation, custom AI agents, RAG systems, and CRM integrations that work 24/7.",
     features: [
-      "GoHighLevel Setup",
-      "Custom AI Agents",
-      "CRM Automation",
-      "Workflow Optimization",
+      "Custom AI Agents & Chatbots",
+      "RAG System Development",
+      "CRM & Workflow Automation",
+      "Generative AI Integration",
     ],
     href: "/services/ai-automation",
     badge: "Upcoming · Future Trend",
@@ -150,12 +124,12 @@ export const serviceCards: ServiceCard[] = [
     icon: "💻",
     title: "Web & App Development",
     description:
-      "Full-stack web solutions from WordPress to custom web applications, built for performance and scalability.",
+      "Full-stack web solutions from WordPress to React/Next.js apps, PHP/Laravel backends, and REST APIs — built for performance and scalability.",
     features: [
-      "WordPress Development",
-      "Custom CMS Solutions",
-      "Landing Pages",
-      "API Development",
+      "WordPress & CMS Development",
+      "React.js / Next.js Apps",
+      "PHP & Laravel Backend",
+      "REST API Development",
     ],
     href: "/services/web-development",
   },
@@ -197,46 +171,6 @@ export const serviceCards: ServiceCard[] = [
       "App UI/UX Design",
     ],
     href: "/services/app-development",
-  },
-  {
-    icon: "⚙️",
-    title: "Backend & API Development",
-    description:
-      "Robust server-side solutions with PHP, Laravel, and REST APIs — secure, scalable, and production-ready.",
-    features: [
-      "PHP & Laravel Development",
-      "REST API Development",
-      "Payment Gateway Integration",
-      "Server Setup & Management",
-    ],
-    href: "/services/backend-api",
-  },
-  {
-    icon: "🟢",
-    title: "MERN Stack Development",
-    description:
-      "Full stack JavaScript solutions using React, Node.js, Express, and Next.js for modern web applications.",
-    features: [
-      "React.js Development",
-      "Node.js & Express APIs",
-      "Next.js Web Apps",
-      "Full Stack Solutions",
-    ],
-    href: "/services/mern-stack",
-  },
-  {
-    icon: "🧠",
-    title: "AI & Machine Learning",
-    description:
-      "Custom AI models, RAG systems, and intelligent agents built with LangChain, LangGraph, and generative AI.",
-    features: [
-      "Custom AI Model Training",
-      "RAG System Development",
-      "AI Agent Development",
-      "Generative AI Integration",
-    ],
-    href: "/services/ai-ml",
-    badge: "New",
   },
 ];
 
