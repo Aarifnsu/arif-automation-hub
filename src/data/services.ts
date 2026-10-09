@@ -193,5 +193,5 @@ export const navLinks = [
 
 export const socialLinks = [
   { label: "Facebook", href: "https://www.facebook.com/Arifautomationhub", icon: "facebook" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/arif-nsu", icon: "linkedin" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/arifautomationhub/", icon: "linkedin" },
 ];
