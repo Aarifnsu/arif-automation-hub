@@ -86,6 +86,28 @@ const blogPosts = [
     readTime: "8 min read",
     gradient: "linear-gradient(135deg, #7c3aed, #8b5cf6)",
   },
+  {
+    slug: "wordpress-cms-mastering-flexible-website-building-in-2025",
+    title: "WordPress & CMS: Mastering Flexible Website Building in 2026",
+    excerpt:
+      "Master WordPress development with custom themes, plugins, performance optimization, and multi-site management for scalable, maintainable web solutions.",
+    category: "Web Development",
+    categoryColor: "#0891b2",
+    date: "October 10, 2026",
+    readTime: "9 min read",
+    gradient: "linear-gradient(135deg, #0891b2, #06b6d4)",
+  },
+  {
+    slug: "gohighlevel-crm-automation-scaling-client-management-in-2025",
+    title: "GoHighLevel CRM & Automation: Scaling Client Management in 2026",
+    excerpt:
+      "Master GoHighLevel platform for client management, marketing automation, pipeline tracking, and business growth without the overhead.",
+    category: "AI Automation",
+    categoryColor: "#2563eb",
+    date: "October 10, 2026",
+    readTime: "8 min read",
+    gradient: "linear-gradient(135deg, #2563eb, #3b82f6)",
+  },
 ];
 
 const topics = [
