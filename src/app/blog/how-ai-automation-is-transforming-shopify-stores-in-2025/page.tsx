@@ -41,7 +41,7 @@ export default function BlogPost() {
             <span>·</span>
             <span>5 min read</span>
             <span>·</span>
-            <span>By <strong style={{ color: "var(--text-primary)" }}>Arif</strong></span>
+            <span>By <strong style={{ color: "var(--text-primary)" }}>Arif AI Automation Hub</strong></span>
           </div>
         </div>
 
@@ -167,7 +167,7 @@ export default function BlogPost() {
         </div>
 
         {/* Back to blog */}
-        <div className="mt-10 text-center">
+        <div className="mt-2 text-center">
           <Link
             href="/blog"
             className="text-sm font-medium no-underline"
