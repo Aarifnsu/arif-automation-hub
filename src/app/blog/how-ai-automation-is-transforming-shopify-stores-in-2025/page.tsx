@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How AI Automation Is Transforming Shopify Stores in 2025 | Arif AI Automation Hub",
+  title: "How AI Automation Is Transforming Shopify Stores in 2026 | Arif AI Automation Hub",
   description:
     "Discover how AI-powered tools like custom chatbots, automated workflows, and smart product recommendations are helping Shopify store owners boost revenue.",
 };
@@ -34,7 +34,7 @@ export default function BlogPost() {
             style={{ color: "var(--text-primary)" }}
           >
             How AI Automation Is Transforming{" "}
-            <span className="gradient-text">Shopify Stores</span> in 2025
+            <span className="gradient-text">Shopify Stores</span> in 2026
           </h1>
           <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <span>October 10, 2026</span>
