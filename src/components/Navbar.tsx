@@ -212,7 +212,7 @@ export default function Navbar() {
                     opacity: megaOpen ? 1 : 0,
                     visibility: megaOpen ? "visible" : "hidden",
                     transform: `translateX(-50%) ${megaOpen ? "translateY(0)" : "translateY(-10px)"}`,
-                    maxHeight: megaOpen ? "700px" : "0",
+                    maxHeight: megaOpen ? "600px" : "0",
                   }}
                 >
                   <div
