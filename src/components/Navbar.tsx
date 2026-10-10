@@ -280,7 +280,7 @@ export default function Navbar() {
                     ))}
                   </div>
                   <div
-                    className="mt-4 pt-3 flex items-center justify-between"
+                    className="mt-6 pt-5 pb-2 flex items-center justify-between"
                     style={{ borderTop: "1px solid var(--card-border)" }}
                   >
                     <span
