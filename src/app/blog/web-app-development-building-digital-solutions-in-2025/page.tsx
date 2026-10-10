@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Web & App Development: Building Digital Solutions in 2025 | Arif AI Automation Hub",
+  title: "Web & App Development: Building Digital Solutions in 2026 | Arif AI Automation Hub",
   description:
     "From WordPress to React.js, Laravel to Node.js APIs, and full-stack solutions — learn how modern web and app development transforms your business.",
 };
@@ -33,7 +33,7 @@ export default function BlogPost() {
             className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] mb-6"
             style={{ color: "var(--text-primary)" }}
           >
-            Web & App <span className="gradient-text">Development</span>: Building Digital Solutions in 2025
+            Web & App <span className="gradient-text">Development</span>: Building Digital Solutions in 2026
           </h1>
           <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <span>October 10, 2026</span>

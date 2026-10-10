@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "SEO & Analytics: Mastering Visibility in 2025 | Arif AI Automation Hub",
+  title: "SEO & Analytics: Mastering Visibility in 2026 | Arif AI Automation Hub",
   description:
     "Master search engine optimization with technical SEO, keyword research, on-page optimization, analytics setup, and performance tracking for sustainable growth.",
 };
@@ -33,7 +33,7 @@ export default function BlogPost() {
             className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] mb-6"
             style={{ color: "var(--text-primary)" }}
           >
-            SEO & <span className="gradient-text">Analytics</span>: Mastering Visibility in 2025
+            SEO & <span className="gradient-text">Analytics</span>: Mastering Visibility in 2026
           </h1>
           <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <span>October 10, 2026</span>

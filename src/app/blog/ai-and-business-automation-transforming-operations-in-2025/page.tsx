@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI & Business Automation: Transforming Operations in 2025 | Arif AI Automation Hub",
+  title: "AI & Business Automation: Transforming Operations in 2026 | Arif AI Automation Hub",
   description:
     "Explore how AI agents, CRM automation, custom chatbots, and workflow automation are revolutionizing business operations. From GoHighLevel setup to RAG systems, learn how to scale your business.",
 };
@@ -33,7 +33,7 @@ export default function BlogPost() {
             className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] mb-6"
             style={{ color: "var(--text-primary)" }}
           >
-            AI & Business <span className="gradient-text">Automation</span>: Transforming Operations in 2025
+            AI & Business <span className="gradient-text">Automation</span>: Transforming Operations in 2026
           </h1>
           <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <span>October 10, 2026</span>

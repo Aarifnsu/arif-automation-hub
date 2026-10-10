@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "App Development: Building Scalable Mobile Solutions in 2025 | Arif AI Automation Hub",
+  title: "App Development: Building Scalable Mobile Solutions in 2026 | Arif AI Automation Hub",
   description:
     "Develop iOS and Android apps with professional design, cross-platform solutions, and long-term maintenance for sustained performance and growth.",
 };
@@ -33,7 +33,7 @@ export default function BlogPost() {
             className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] mb-6"
             style={{ color: "var(--text-primary)" }}
           >
-            App <span className="gradient-text">Development</span>: Building Scalable Mobile Solutions in 2025
+            App <span className="gradient-text">Development</span>: Building Scalable Mobile Solutions in 2026
           </h1>
           <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <span>October 10, 2026</span>

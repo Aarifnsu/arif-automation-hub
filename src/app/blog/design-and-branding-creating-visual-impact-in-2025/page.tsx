@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Design & Branding: Creating Visual Impact in 2025 | Arif AI Automation Hub",
+  title: "Design & Branding: Creating Visual Impact in 2026 | Arif AI Automation Hub",
   description:
     "Build a compelling brand identity with professional logo design, UI/UX design, social media graphics, and print materials that stand out and convert.",
 };
@@ -33,7 +33,7 @@ export default function BlogPost() {
             className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] mb-6"
             style={{ color: "var(--text-primary)" }}
           >
-            Design & <span className="gradient-text">Branding</span>: Creating Visual Impact in 2025
+            Design & <span className="gradient-text">Branding</span>: Creating Visual Impact in 2026
           </h1>
           <div className="flex items-center gap-4 text-sm" style={{ color: "var(--text-muted)" }}>
             <span>October 10, 2026</span>
