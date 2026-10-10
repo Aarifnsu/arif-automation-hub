@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const blogPosts = [
   {
     slug: "how-ai-automation-is-transforming-shopify-stores-in-2025",
-    title: "How AI Automation Is Transforming Shopify Stores in 2025",
+    title: "How AI Automation Is Transforming Shopify Stores in 2026",
     excerpt:
       "Discover how AI-powered tools like custom chatbots, automated workflows, and smart product recommendations are helping Shopify store owners boost revenue and save hours every week.",
     category: "AI Automation",
@@ -19,6 +19,72 @@ const blogPosts = [
     date: "October 10, 2026",
     readTime: "5 min read",
     gradient: "linear-gradient(135deg, #2563eb, #06b6d4)",
+  },
+  {
+    slug: "ai-and-business-automation-transforming-operations-in-2025",
+    title: "AI & Business Automation: Transforming Operations in 2026",
+    excerpt:
+      "Master AI automation with GoHighLevel, custom AI agents, CRM automation, chatbots, and workflow automation to streamline your business operations and scale without burnout.",
+    category: "AI Automation",
+    categoryColor: "#2563eb",
+    date: "October 10, 2026",
+    readTime: "9 min read",
+    gradient: "linear-gradient(135deg, #2563eb, #3b82f6)",
+  },
+  {
+    slug: "shopify-solutions-scaling-ecommerce-in-2025",
+    title: "Shopify Solutions: Scaling E-commerce in 2026",
+    excerpt:
+      "Build high-converting Shopify stores with custom development, theme customization, app integration, and performance optimization to maximize revenue and customer satisfaction.",
+    category: "Shopify",
+    categoryColor: "#16a34a",
+    date: "October 10, 2026",
+    readTime: "7 min read",
+    gradient: "linear-gradient(135deg, #16a34a, #22c55e)",
+  },
+  {
+    slug: "web-app-development-building-digital-solutions-in-2025",
+    title: "Web & App Development: Building Digital Solutions in 2026",
+    excerpt:
+      "From WordPress to React.js, Laravel to Node.js APIs, and full-stack solutions — learn how modern web and app development transforms your business.",
+    category: "Web Development",
+    categoryColor: "#0891b2",
+    date: "October 10, 2026",
+    readTime: "8 min read",
+    gradient: "linear-gradient(135deg, #0891b2, #06b6d4)",
+  },
+  {
+    slug: "design-and-branding-creating-visual-impact-in-2025",
+    title: "Design & Branding: Creating Visual Impact in 2026",
+    excerpt:
+      "Build a compelling brand identity with professional logo design, UI/UX design, social media graphics, and print materials that stand out and convert.",
+    category: "Design",
+    categoryColor: "#c026d3",
+    date: "October 10, 2026",
+    readTime: "7 min read",
+    gradient: "linear-gradient(135deg, #c026d3, #d946ef)",
+  },
+  {
+    slug: "seo-and-analytics-mastering-visibility-in-2025",
+    title: "SEO & Analytics: Mastering Visibility in 2026",
+    excerpt:
+      "Master search engine optimization with technical SEO, keyword research, on-page optimization, analytics setup, and performance tracking for sustainable growth.",
+    category: "SEO",
+    categoryColor: "#ea580c",
+    date: "October 10, 2026",
+    readTime: "7 min read",
+    gradient: "linear-gradient(135deg, #ea580c, #f97316)",
+  },
+  {
+    slug: "app-development-building-scalable-mobile-solutions-in-2025",
+    title: "App Development: Building Scalable Mobile Solutions in 2026",
+    excerpt:
+      "Develop iOS and Android apps with professional design, cross-platform solutions, and long-term maintenance for sustained performance and growth.",
+    category: "App Development",
+    categoryColor: "#7c3aed",
+    date: "October 10, 2026",
+    readTime: "8 min read",
+    gradient: "linear-gradient(135deg, #7c3aed, #8b5cf6)",
   },
 ];
 
