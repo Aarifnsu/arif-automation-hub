@@ -15,6 +15,7 @@ export interface PortfolioProject {
     name: string;
     role: string;
   };
+  liveLink?: string;
 }
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -44,6 +45,7 @@ export const portfolioProjects: PortfolioProject[] = [
       name: "James Mitchell",
       role: "CEO, TechVentures USA",
     },
+    liveLink: "https://www.beautywiththai.com/",
   },
   {
     slug: "smart-order-processing",
@@ -98,48 +100,51 @@ export const portfolioProjects: PortfolioProject[] = [
       name: "Robert Lee",
       role: "Founder, CanadaFresh Co.",
     },
+    liveLink: "https://chemorabuildtech.com/",
   },
   {
     slug: "ecommerce-automation-suite",
-    title: "E-Commerce Automation Suite",
-    category: "ai-automation",
-    tag: "AI Automation",
+    title: "KDM Motors Import",
+    category: "cms",
+    tag: "WordPress",
     icon: "⚙️",
     gradient: "linear-gradient(135deg, #1e1b4b, #7c3aed)",
     shortDesc:
-      "Full-stack automation system for inventory, pricing, and customer follow-ups.",
+      "Automotive import business website with inventory showcase and lead generation system.",
     challenge:
-      "Managing inventory across multiple channels manually was causing overselling and missed restock opportunities.",
+      "The automotive company needed a professional online presence to showcase their vehicle inventory and generate leads.",
     solution:
-      "Built an integrated automation system connecting Shopify, email marketing, and inventory management with AI-driven pricing.",
+      "Built a WordPress site with inventory management, vehicle gallery, contact forms, and lead tracking system.",
     results: [
-      "Zero overselling incidents",
-      "35% increase in repeat purchases",
-      "Automated email sequences generating $15K/month",
-      "Real-time inventory sync across 3 channels",
+      "Professional vehicle showcase",
+      "Lead generation system implemented",
+      "Mobile-responsive design",
+      "Customer inquiry management streamlined",
     ],
-    technologies: ["n8n", "Shopify API", "GoHighLevel", "Custom AI"],
+    technologies: ["WordPress", "Custom Theme", "Contact Forms", "SEO"],
+    liveLink: "https://kdmmotorsimport.com/",
   },
   {
     slug: "luxury-fashion-store",
-    title: "Luxury Fashion Boutique",
+    title: "Oumali Pecare",
     category: "shopify",
     tag: "Shopify",
     icon: "👗",
     gradient: "linear-gradient(135deg, #1a1a2e, #e94560)",
     shortDesc:
-      "High-end fashion store with custom lookbook design and VIP customer experience.",
+      "Premium skincare and wellness store with custom Shopify design and customer experience optimization.",
     challenge:
-      "The brand needed an online presence that matched their luxury in-store experience.",
+      "The brand needed a professional e-commerce presence that matched their premium product quality.",
     solution:
-      "Custom Shopify theme with lookbook-style product pages, VIP membership system, and personalized shopping experience.",
+      "Custom Shopify store with elegant product pages, integrated payment systems, and full SEO optimization.",
     results: [
-      "150% increase in average order value",
-      "Custom VIP loyalty program launched",
-      "Mobile conversion rate improved by 80%",
-      "Featured in 3 fashion publications",
+      "Professional online store launched",
+      "Mobile-optimized checkout experience",
+      "Google PageSpeed score 90+",
+      "Streamlined customer purchase flow",
     ],
-    technologies: ["Shopify Plus", "Custom Liquid", "Klaviyo", "UI/UX Design"],
+    technologies: ["Shopify", "Custom Theme", "Payment Integration", "SEO"],
+    liveLink: "https://www.oumalipecare.com/",
   },
   {
     slug: "tech-startup-branding",
