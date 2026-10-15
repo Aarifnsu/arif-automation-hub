@@ -71,7 +71,7 @@ export default function PortfolioFilter({
             className="rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1 h-full w-full"
             style={{
               background: "var(--bg-card)",
-              border: project.liveLink ? "1px solid rgba(34, 197, 94, 0.3)" : "1px solid var(--card-border)",
+              border: "1px solid var(--card-border)",
             }}
           >
             {/* Gradient area with icon */}
@@ -94,12 +94,12 @@ export default function PortfolioFilter({
               <span
                 className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3"
                 style={{
-                  background: project.liveLink ? "rgba(34, 197, 94, 0.1)" : "rgba(37, 99, 235, 0.1)",
-                  color: project.liveLink ? "rgb(34, 197, 94)" : "var(--electric-blue)",
-                  border: project.liveLink ? "1px solid rgba(34, 197, 94, 0.2)" : "1px solid rgba(37, 99, 235, 0.2)",
+                  background: "rgba(37, 99, 235, 0.1)",
+                  color: "var(--electric-blue)",
+                  border: "1px solid rgba(37, 99, 235, 0.2)",
                 }}
               >
-                {project.tag} {project.liveLink && "✓ Live"}
+                {project.tag}
               </span>
 
               {/* Title - clickable if liveLink exists */}
@@ -109,7 +109,7 @@ export default function PortfolioFilter({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-display text-xl font-bold mb-2 block hover:underline transition-colors duration-300 no-underline cursor-pointer"
-                  style={{ color: "rgb(34, 197, 94)" }}
+                  style={{ color: "var(--electric-blue)" }}
                 >
                   {project.title}
                 </a>
@@ -131,17 +131,6 @@ export default function PortfolioFilter({
 
               {/* Links */}
               <div className="flex flex-col gap-2">
-                {project.liveLink && (
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm font-semibold no-underline transition-colors duration-300 hover:underline"
-                    style={{ color: "rgb(34, 197, 94)" }}
-                  >
-                    Visit Live Site →
-                  </a>
-                )}
                 <Link
                   href={`/portfolio/${project.slug}`}
                   className="inline-flex items-center text-sm font-semibold no-underline transition-colors duration-300"

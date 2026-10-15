@@ -119,10 +119,60 @@ export const portfolioProjects: PortfolioProject[] = [
     technologies: ["Shopify", "Custom Theme", "Payment Integration", "SEO"],
     liveLink: "https://www.oumalipecare.com/",
   },
+  {
+    slug: "smart-order-processing",
+    title: "Smart Order Processing",
+    category: "ai-automation",
+    tag: "AI Automation",
+    icon: "🤖",
+    gradient: "linear-gradient(135deg, #1a2f4a, #06b6d4)",
+    shortDesc:
+      "AI-powered workflow automation reducing order processing time by 70%.",
+    challenge:
+      "Manual order processing was taking 4+ hours daily, causing delays and customer complaints.",
+    solution:
+      "We implemented an AI-powered workflow using n8n and custom scripts that automatically processes, categorizes, and routes orders.",
+    results: [
+      "70% reduction in processing time",
+      "Zero manual errors in order routing",
+      "80% of queries handled by AI chatbot",
+      "24/7 automated customer support",
+    ],
+    technologies: ["n8n", "AI Agents", "GoHighLevel", "API Integration"],
+    testimonial: {
+      quote:
+        "The AI chatbot they built handles 80% of our customer queries automatically. Game changer!",
+      name: "Sarah Klein",
+      role: "COO, Nordic Commerce",
+    },
+  },
+  {
+    slug: "tech-startup-branding",
+    title: "Tech Startup Brand Identity",
+    category: "design",
+    tag: "Design & Branding",
+    icon: "🎨",
+    gradient: "linear-gradient(135deg, #0d1117, #c026d3)",
+    shortDesc:
+      "Complete brand identity design including logo, brand guidelines, and marketing materials.",
+    challenge:
+      "A new SaaS startup needed a complete brand identity from scratch that would stand out in a crowded market.",
+    solution:
+      "We created a comprehensive brand identity system including logo variations, color palette, typography, and brand guidelines.",
+    results: [
+      "Brand recognition increased by 200%",
+      "Consistent branding across all 12 touchpoints",
+      "Social media engagement up 150%",
+      "Professional investor deck designed",
+    ],
+    technologies: ["Figma", "Adobe Illustrator", "Brand Strategy", "UI/UX"],
+  },
 ];
 
 export const portfolioCategories = [
   { label: "All", value: "all" },
   { label: "Shopify", value: "shopify" },
+  { label: "AI Automation", value: "ai-automation" },
   { label: "CMS / WordPress", value: "cms" },
+  { label: "Design", value: "design" },
 ];
