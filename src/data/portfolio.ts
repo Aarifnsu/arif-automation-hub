@@ -48,6 +48,28 @@ export const portfolioProjects: PortfolioProject[] = [
     liveLink: "https://www.beautywiththai.com/",
   },
   {
+    slug: "oumali-pecare",
+    title: "Oumali Pecare",
+    category: "shopify",
+    tag: "Shopify",
+    icon: "👗",
+    gradient: "linear-gradient(135deg, #1a1a2e, #e94560)",
+    shortDesc:
+      "Premium skincare and wellness store with custom Shopify design and customer experience optimization.",
+    challenge:
+      "The brand needed a professional e-commerce presence that matched their premium product quality.",
+    solution:
+      "Custom Shopify store with elegant product pages, integrated payment systems, and full SEO optimization.",
+    results: [
+      "Professional online store launched",
+      "Mobile-optimized checkout experience",
+      "Google PageSpeed score 90+",
+      "Streamlined customer purchase flow",
+    ],
+    technologies: ["Shopify", "Custom Theme", "Payment Integration", "SEO"],
+    liveLink: "https://www.oumalipecare.com/",
+  },
+  {
     slug: "chemora-buildtech",
     title: "Chemora Buildtech",
     category: "cms",
@@ -96,28 +118,6 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     technologies: ["WordPress", "Custom Theme", "Contact Forms", "SEO"],
     liveLink: "https://kdmmotorsimport.com/",
-  },
-  {
-    slug: "oumali-pecare",
-    title: "Oumali Pecare",
-    category: "shopify",
-    tag: "Shopify",
-    icon: "👗",
-    gradient: "linear-gradient(135deg, #1a1a2e, #e94560)",
-    shortDesc:
-      "Premium skincare and wellness store with custom Shopify design and customer experience optimization.",
-    challenge:
-      "The brand needed a professional e-commerce presence that matched their premium product quality.",
-    solution:
-      "Custom Shopify store with elegant product pages, integrated payment systems, and full SEO optimization.",
-    results: [
-      "Professional online store launched",
-      "Mobile-optimized checkout experience",
-      "Google PageSpeed score 90+",
-      "Streamlined customer purchase flow",
-    ],
-    technologies: ["Shopify", "Custom Theme", "Payment Integration", "SEO"],
-    liveLink: "https://www.oumalipecare.com/",
   },
   {
     slug: "smart-order-processing",
