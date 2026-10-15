@@ -65,119 +65,82 @@ export default function PortfolioFilter({
       {/* Project cards — swipe on mobile, grid on desktop */}
       <MobileCarousel autoScrollMs={3000} key={filtered.map((p) => p.slug).join("|")} desktopClassName="grid-cols-2 lg:grid-cols-3 gap-8">
         {filtered.map((project) => (
-          {project.liveLink ? (
-            <a
-              key={project.slug}
-              href={project.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1 h-full w-full block cursor-pointer no-underline"
-              style={{
-                background: "var(--bg-card)",
-                border: "1px solid rgba(34, 197, 94, 0.3)",
-              }}
+          <div
+            key={project.slug}
+            className="rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1 h-full w-full"
+            style={{
+              background: "var(--bg-card)",
+              border: project.liveLink ? "1px solid rgba(34, 197, 94, 0.3)" : "1px solid var(--card-border)",
+            }}
+          >
+            {/* Gradient area with icon */}
+            <div
+              className="h-40 md:h-48 flex items-center justify-center relative"
+              style={{ background: project.gradient }}
             >
-              {/* Gradient area with icon */}
-              <div
-                className="h-40 md:h-48 flex items-center justify-center relative"
-                style={{ background: project.gradient }}
+              <Image
+                src={portfolioImages[project.icon] || "/images/shopify-complete-store-solution.webp"}
+                alt={project.title}
+                width={200}
+                height={192}
+                className="object-cover w-full h-full"
+              />
+            </div>
+
+            {/* Card content */}
+            <div className="p-6">
+              {/* Tag badge */}
+              <span
+                className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3"
+                style={{
+                  background: project.liveLink ? "rgba(34, 197, 94, 0.1)" : "rgba(37, 99, 235, 0.1)",
+                  color: project.liveLink ? "rgb(34, 197, 94)" : "var(--electric-blue)",
+                  border: project.liveLink ? "1px solid rgba(34, 197, 94, 0.2)" : "1px solid rgba(37, 99, 235, 0.2)",
+                }}
               >
-                <Image
-                  src={portfolioImages[project.icon] || "/images/shopify-complete-store-solution.webp"}
-                  alt={project.title}
-                  width={200}
-                  height={192}
-                  className="object-cover w-full h-full"
-                />
-              </div>
+                {project.tag} {project.liveLink && "✓ Live"}
+              </span>
 
-              {/* Card content */}
-              <div className="p-6">
-                {/* Tag badge */}
-                <span
-                  className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3"
-                  style={{
-                    background: "rgba(34, 197, 94, 0.1)",
-                    color: "rgb(34, 197, 94)",
-                    border: "1px solid rgba(34, 197, 94, 0.2)",
-                  }}
-                >
-                  {project.tag} ✓ Live
-                </span>
-
-                <h3
-                  className="font-display text-xl font-bold mb-2"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {project.title}
-                </h3>
-
-                <p
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: "var(--text-secondary)" }}
-                >
-                  {project.shortDesc}
-                </p>
-
-                <span
-                  className="inline-flex items-center text-sm font-semibold no-underline transition-colors duration-300"
+              {/* Title - clickable if liveLink exists */}
+              {project.liveLink ? (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-display text-xl font-bold mb-2 block hover:underline transition-colors duration-300 no-underline cursor-pointer"
                   style={{ color: "rgb(34, 197, 94)" }}
                 >
-                  Visit Live Site →
-                </span>
-              </div>
-            </a>
-          ) : (
-            <div
-              key={project.slug}
-              className="rounded-2xl overflow-hidden transition-all duration-400 hover:-translate-y-1 h-full w-full"
-              style={{
-                background: "var(--bg-card)",
-                border: "1px solid var(--card-border)",
-              }}
-            >
-              {/* Gradient area with icon */}
-              <div
-                className="h-40 md:h-48 flex items-center justify-center relative"
-                style={{ background: project.gradient }}
-              >
-                <Image
-                  src={portfolioImages[project.icon] || "/images/shopify-complete-store-solution.webp"}
-                  alt={project.title}
-                  width={200}
-                  height={192}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-
-              {/* Card content */}
-              <div className="p-6">
-                {/* Tag badge */}
-                <span
-                  className="inline-block text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3"
-                  style={{
-                    background: "rgba(37, 99, 235, 0.1)",
-                    color: "var(--electric-blue)",
-                    border: "1px solid rgba(37, 99, 235, 0.2)",
-                  }}
-                >
-                  {project.tag}
-                </span>
-
+                  {project.title}
+                </a>
+              ) : (
                 <h3
                   className="font-display text-xl font-bold mb-2"
                   style={{ color: "var(--text-primary)" }}
                 >
                   {project.title}
                 </h3>
+              )}
 
-                <p
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: "var(--text-secondary)" }}
-                >
-                  {project.shortDesc}
-                </p>
+              <p
+                className="text-sm leading-relaxed mb-4"
+                style={{ color: "var(--text-secondary)" }}
+              >
+                {project.shortDesc}
+              </p>
 
+              {/* Links */}
+              <div className="flex flex-col gap-2">
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm font-semibold no-underline transition-colors duration-300 hover:underline"
+                    style={{ color: "rgb(34, 197, 94)" }}
+                  >
+                    Visit Live Site →
+                  </a>
+                )}
                 <Link
                   href={`/portfolio/${project.slug}`}
                   className="inline-flex items-center text-sm font-semibold no-underline transition-colors duration-300"
@@ -187,7 +150,7 @@ export default function PortfolioFilter({
                 </Link>
               </div>
             </div>
-          )}
+          </div>
         ))}
       </MobileCarousel>
     </>
