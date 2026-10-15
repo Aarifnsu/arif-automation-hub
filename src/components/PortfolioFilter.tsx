@@ -11,6 +11,7 @@ const portfolioImages: Record<string, string> = {
   "🤖": "/images/ai-bot-task-automation-assistant.webp",
   "🌐": "/images/custom-code-development-database.webp",
   "⚙️": "/images/ecommerce-store-automation-workflow.webp",
+  "🚗": "/images/ecommerce-store-automation-workflow.webp",
   "👗": "/images/ecommerce-mobile-responsive-sales-growth.webp",
   "🎨": "/images/ui-ux-design-creative-tools.webp",
 };
